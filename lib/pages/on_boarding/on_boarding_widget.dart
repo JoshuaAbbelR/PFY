@@ -181,8 +181,17 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                     Align(
                       alignment: AlignmentDirectional(0.0, 1.0),
                       child: FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
+                        onPressed: () async {
+                          context.goNamed(
+                            'loginPage',
+                            extra: <String, dynamic>{
+                              kTransitionInfoKey: TransitionInfo(
+                                hasTransition: true,
+                                transitionType: PageTransitionType.fade,
+                                duration: Duration(milliseconds: 300),
+                              ),
+                            },
+                          );
                         },
                         text: 'Next',
                         options: FFButtonOptions(
