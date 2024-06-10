@@ -110,6 +110,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'homePage',
           path: '/homePage',
           builder: (context, params) => HomePageWidget(),
+        ),
+        FFRoute(
+          name: 'aakosong',
+          path: '/aakosong',
+          builder: (context, params) => AakosongWidget(),
+        ),
+        FFRoute(
+          name: 'searchBar',
+          path: '/searchBar',
+          builder: (context, params) => SearchBarWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
