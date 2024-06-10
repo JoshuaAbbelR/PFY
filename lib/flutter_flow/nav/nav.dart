@@ -120,6 +120,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'searchResult',
           path: '/searchResult',
           builder: (context, params) => SearchResultWidget(),
+        ),
+        FFRoute(
+          name: 'massage',
+          path: '/massage',
+          builder: (context, params) => MassageWidget(),
+        ),
+        FFRoute(
+          name: 'massageInterface',
+          path: '/massageInterface',
+          builder: (context, params) => MassageInterfaceWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
