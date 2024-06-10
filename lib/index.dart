@@ -10,3 +10,5 @@ export '/pages/massage/massage_widget.dart' show MassageWidget;
 export '/pages/massage_interface/massage_interface_widget.dart'
     show MassageInterfaceWidget;
 export '/pages/account/account_widget.dart' show AccountWidget;
+export '/pages/create_listing/create_listing_widget.dart'
+    show CreateListingWidget;
