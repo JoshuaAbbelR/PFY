@@ -140,6 +140,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'createListing',
           path: '/createListing',
           builder: (context, params) => CreateListingWidget(),
+        ),
+        FFRoute(
+          name: 'adoptChoose',
+          path: '/adoptChoose',
+          builder: (context, params) => AdoptChooseWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
