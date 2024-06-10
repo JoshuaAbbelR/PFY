@@ -88,6 +88,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'onBoarding',
           path: '/onBoarding',
           builder: (context, params) => OnBoardingWidget(),
+        ),
+        FFRoute(
+          name: 'loginPage',
+          path: '/loginPage',
+          builder: (context, params) => LoginPageWidget(),
+        ),
+        FFRoute(
+          name: 'registerPage',
+          path: '/registerPage',
+          builder: (context, params) => RegisterPageWidget(),
+        ),
+        FFRoute(
+          name: 'verifycation',
+          path: '/verifycation',
+          builder: (context, params) => VerifycationWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
