@@ -9,3 +9,4 @@ export '/pages/search_result/search_result_widget.dart' show SearchResultWidget;
 export '/pages/massage/massage_widget.dart' show MassageWidget;
 export '/pages/massage_interface/massage_interface_widget.dart'
     show MassageInterfaceWidget;
+export '/pages/account/account_widget.dart' show AccountWidget;
