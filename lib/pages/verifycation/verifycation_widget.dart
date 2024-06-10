@@ -25,8 +25,6 @@ class _VerifycationWidgetState extends State<VerifycationWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => VerifycationModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

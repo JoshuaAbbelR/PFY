@@ -77,12 +77,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => appStateNotifier.loggedIn ? () : (),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? HomePageWidget() : OnBoardingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn ? () : (),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? HomePageWidget() : OnBoardingWidget(),
         ),
         FFRoute(
           name: 'onBoarding',
@@ -103,6 +105,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'verifycation',
           path: '/verifycation',
           builder: (context, params) => VerifycationWidget(),
+        ),
+        FFRoute(
+          name: 'homePage',
+          path: '/homePage',
+          builder: (context, params) => HomePageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -271,7 +278,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/';
+            return '/onBoarding';
           }
           return null;
         },
