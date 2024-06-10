@@ -279,8 +279,17 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 270.0, 0.0, 16.0),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        context.pushNamed(
+                          'verifycation',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 300),
+                            ),
+                          },
+                        );
                       },
                       text: 'Continue',
                       options: FFButtonOptions(
@@ -326,6 +335,21 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                 ),
+                            mouseCursor: SystemMouseCursors.click,
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                context.goNamed(
+                                  'loginPage',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.leftToRight,
+                                      duration: Duration(milliseconds: 300),
+                                    ),
+                                  },
+                                );
+                              },
                           )
                         ],
                         style: FlutterFlowTheme.of(context).bodyMedium.override(

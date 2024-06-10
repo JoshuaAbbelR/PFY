@@ -110,39 +110,93 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                child: Row(
+              SingleChildScrollView(
+                child: Column(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
-                      child: Text(
-                        'Last Search',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.w500,
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                8.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              'Last Search',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Inter',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                             ),
+                          ),
+                          FlutterFlowIconButton(
+                            borderColor:
+                                FlutterFlowTheme.of(context).primaryText,
+                            borderRadius: 8.0,
+                            borderWidth: 0.0,
+                            buttonSize: 30.0,
+                            fillColor: Color(0x00105DFB),
+                            icon: Icon(
+                              Icons.close,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              size: 15.0,
+                            ),
+                            onPressed: () {
+                              print('IconButton pressed ...');
+                            },
+                          ),
+                        ],
                       ),
                     ),
-                    FlutterFlowIconButton(
-                      borderColor: FlutterFlowTheme.of(context).primaryText,
-                      borderRadius: 8.0,
-                      borderWidth: 0.0,
-                      buttonSize: 30.0,
-                      fillColor: Color(0x00105DFB),
-                      icon: Icon(
-                        Icons.close,
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        size: 15.0,
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                8.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              'Last Search',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Inter',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                            ),
+                          ),
+                          FlutterFlowIconButton(
+                            borderColor:
+                                FlutterFlowTheme.of(context).primaryText,
+                            borderRadius: 8.0,
+                            borderWidth: 0.0,
+                            buttonSize: 30.0,
+                            fillColor: Color(0x00105DFB),
+                            icon: Icon(
+                              Icons.close,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              size: 15.0,
+                            ),
+                            onPressed: () {
+                              print('IconButton pressed ...');
+                            },
+                          ),
+                        ],
                       ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
-                      },
                     ),
                   ],
                 ),
