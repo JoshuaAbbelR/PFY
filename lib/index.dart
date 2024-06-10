@@ -12,3 +12,4 @@ export '/pages/massage_interface/massage_interface_widget.dart'
 export '/pages/account/account_widget.dart' show AccountWidget;
 export '/pages/create_listing/create_listing_widget.dart'
     show CreateListingWidget;
+export '/pages/adopt_choose/adopt_choose_widget.dart' show AdoptChooseWidget;
