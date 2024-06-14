@@ -170,6 +170,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'toysList',
           path: '/toysList',
           builder: (context, params) => ToysListWidget(),
+        ),
+        FFRoute(
+          name: 'toysInfo',
+          path: '/toysInfo',
+          builder: (context, params) => ToysInfoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
