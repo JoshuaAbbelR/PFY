@@ -27,3 +27,4 @@ export '/pages/home/adopt/adopt_info/adopt_info_widget.dart'
 export '/pages/home/toys/toys_choose/toys_choose_widget.dart'
     show ToysChooseWidget;
 export '/pages/home/toys/toys_list/toys_list_widget.dart' show ToysListWidget;
+export '/pages/home/toys/toys_info/toys_info_widget.dart' show ToysInfoWidget;
