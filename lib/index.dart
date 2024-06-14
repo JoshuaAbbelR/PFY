@@ -31,3 +31,4 @@ export '/pages/home/toys/toys_info/toys_info_widget.dart' show ToysInfoWidget;
 export '/pages/home/foods/food_choose/food_choose_widget.dart'
     show FoodChooseWidget;
 export '/pages/home/foods/food_list/food_list_widget.dart' show FoodListWidget;
+export '/pages/home/foods/food_info/food_info_widget.dart' show FoodInfoWidget;
