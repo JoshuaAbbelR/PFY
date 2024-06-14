@@ -20,3 +20,5 @@ export '/pages/home/adopt/adopt_choose/adopt_choose_widget.dart'
     show AdoptChooseWidget;
 export '/pages/home/checkout_page/checkout_page_widget.dart'
     show CheckoutPageWidget;
+export '/pages/home/adopt/adopt_list/adopt_list_widget.dart'
+    show AdoptListWidget;
