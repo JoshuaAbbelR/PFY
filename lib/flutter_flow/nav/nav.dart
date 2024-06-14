@@ -185,6 +185,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'foodList',
           path: '/foodList',
           builder: (context, params) => FoodListWidget(),
+        ),
+        FFRoute(
+          name: 'foodInfo',
+          path: '/foodInfo',
+          builder: (context, params) => FoodInfoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

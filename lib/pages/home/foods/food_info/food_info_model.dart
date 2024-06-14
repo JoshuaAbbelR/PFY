@@ -2,12 +2,12 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'adopt_list_widget.dart' show AdoptListWidget;
+import 'food_info_widget.dart' show FoodInfoWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class AdoptListModel extends FlutterFlowModel<AdoptListWidget> {
+class FoodInfoModel extends FlutterFlowModel<FoodInfoWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
