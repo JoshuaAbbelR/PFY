@@ -122,14 +122,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => SearchResultWidget(),
         ),
         FFRoute(
-          name: 'massage',
-          path: '/massage',
-          builder: (context, params) => MassageWidget(),
+          name: 'message',
+          path: '/message',
+          builder: (context, params) => MessageWidget(),
         ),
         FFRoute(
-          name: 'massageInterface',
-          path: '/massageInterface',
-          builder: (context, params) => MassageInterfaceWidget(),
+          name: 'messageInterface',
+          path: '/messageInterface',
+          builder: (context, params) => MessageInterfaceWidget(),
         ),
         FFRoute(
           name: 'account',
