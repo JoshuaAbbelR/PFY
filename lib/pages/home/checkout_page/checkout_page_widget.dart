@@ -335,7 +335,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                       Container(
                         width: double.infinity,
                         constraints: BoxConstraints(
-                          maxWidth: 430.0,
+                          maxWidth: 750.0,
                         ),
                         decoration: BoxDecoration(
                           color:
