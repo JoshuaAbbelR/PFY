@@ -145,6 +145,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'adoptChoose',
           path: '/adoptChoose',
           builder: (context, params) => AdoptChooseWidget(),
+        ),
+        FFRoute(
+          name: 'checkoutPage',
+          path: '/checkoutPage',
+          builder: (context, params) => CheckoutPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -13,3 +13,4 @@ export '/pages/account/account_widget.dart' show AccountWidget;
 export '/pages/create_listing/create_listing_widget.dart'
     show CreateListingWidget;
 export '/pages/adopt_choose/adopt_choose_widget.dart' show AdoptChooseWidget;
+export '/checkout_page/checkout_page_widget.dart' show CheckoutPageWidget;
