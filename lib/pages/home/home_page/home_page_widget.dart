@@ -61,14 +61,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         children: [
                           Align(
                             alignment: AlignmentDirectional(0.0, 0.0),
-                            child: Text(
-                              'Pet\'s For You',
-                              style: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 15.0, 0.0, 0.0),
+                              child: Text(
+                                'Pet\'s For You',
+                                style: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
                             ),
                           ),
                           Align(
