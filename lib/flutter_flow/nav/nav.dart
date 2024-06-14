@@ -180,6 +180,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'foodChoose',
           path: '/foodChoose',
           builder: (context, params) => FoodChooseWidget(),
+        ),
+        FFRoute(
+          name: 'foodList',
+          path: '/foodList',
+          builder: (context, params) => FoodListWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
