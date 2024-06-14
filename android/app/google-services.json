@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "633947686814",
-    "project_id": "pet-s-for-you",
-    "storage_bucket": "pet-s-for-you.appspot.com"
+    "project_number": "974671934865",
+    "project_id": "pet-for-you-5mjuzb",
+    "storage_bucket": "pet-for-you-5mjuzb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:633947686814:android:fee750b34fdd2b6682388f",
+        "mobilesdk_app_id": "1:974671934865:android:249eb94c1866361e405630",
         "android_client_info": {
-          "package_name": "com.ppl.petsforyou"
+          "package_name": "com.petforyou.app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCKxXmtUqtupZsqcJi2aGx-HFfwvM9qYtY"
+          "current_key": "AIzaSyAwtndfJjaioi_F8SizIvSAcldvbuws07U"
         }
       ],
       "services": {

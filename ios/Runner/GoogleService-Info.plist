@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBv92ITbSgzDq-17PF9OPpeAjgbfA--NJo</string>
+	<string>AIzaSyBN9ni6K-Ypf87Iz7cpEYcQkq-O4zBGKKM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>633947686814</string>
+	<string>974671934865</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.ppl.petsforyou</string>
+	<string>com.petforyou.app</string>
 	<key>PROJECT_ID</key>
-	<string>pet-s-for-you</string>
+	<string>pet-for-you-5mjuzb</string>
 	<key>STORAGE_BUCKET</key>
-	<string>pet-s-for-you.appspot.com</string>
+	<string>pet-for-you-5mjuzb.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:633947686814:ios:8281fdd6d35a6cb082388f</string>
+	<string>1:974671934865:ios:832c520f4d9c3249405630</string>
 </dict>
 </plist>

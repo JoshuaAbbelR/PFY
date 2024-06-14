@@ -118,7 +118,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .titleLarge
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'Outfit',
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -203,7 +203,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                                               .titleLarge
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    'Outfit',
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
@@ -240,7 +240,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                                                   .labelSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     letterSpacing:
                                                                         0.0,
                                                                   ),
@@ -262,8 +262,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                                             context)
                                                         .titleLarge
                                                         .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
+                                                          fontFamily: 'Outfit',
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
@@ -282,7 +281,8 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .labelMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -311,7 +311,8 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          fontFamily:
+                                                              'Readex Pro',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .error,
@@ -364,7 +365,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'Outfit',
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -376,7 +377,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        fontFamily: 'Inter',
+                                        fontFamily: 'Readex Pro',
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -401,7 +402,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Inter',
+                                              fontFamily: 'Readex Pro',
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -434,7 +435,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'Readex Pro',
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -492,7 +493,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .displaySmall
                                                 .override(
-                                                  fontFamily: 'Readex Pro',
+                                                  fontFamily: 'Outfit',
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -517,7 +518,7 @@ class _CheckoutPageWidgetState extends State<CheckoutPageWidget> {
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
-                                        fontFamily: 'Inter',
+                                        fontFamily: 'Readex Pro',
                                         letterSpacing: 0.0,
                                       ),
                                   elevation: 2.0,

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -78,13 +79,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? HomePageWidget() : OnBoardingWidget(),
+          appStateNotifier.loggedIn ? NavBarPage() : OnBoardingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomePageWidget() : OnBoardingWidget(),
+              appStateNotifier.loggedIn ? NavBarPage() : OnBoardingWidget(),
+        ),
+        FFRoute(
+          name: 'homePage',
+          path: '/homePage',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'homePage')
+              : HomePageWidget(),
         ),
         FFRoute(
           name: 'onBoarding',
@@ -102,69 +110,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => RegisterPageWidget(),
         ),
         FFRoute(
-          name: 'verifycation',
-          path: '/verifycation',
-          builder: (context, params) => VerifycationWidget(),
-        ),
-        FFRoute(
-          name: 'homePage',
-          path: '/homePage',
-          builder: (context, params) => HomePageWidget(),
-        ),
-        FFRoute(
-          name: 'searchBar',
-          path: '/searchBar',
-          builder: (context, params) => SearchBarWidget(),
-        ),
-        FFRoute(
-          name: 'searchResult',
-          path: '/searchResult',
-          builder: (context, params) => SearchResultWidget(),
-        ),
-        FFRoute(
-          name: 'message',
-          path: '/message',
-          builder: (context, params) => MessageWidget(),
-        ),
-        FFRoute(
-          name: 'messageInterface',
-          path: '/messageInterface',
-          builder: (context, params) => MessageInterfaceWidget(),
-        ),
-        FFRoute(
-          name: 'account',
-          path: '/account',
-          builder: (context, params) => AccountWidget(),
-        ),
-        FFRoute(
           name: 'createListing',
           path: '/createListing',
-          builder: (context, params) => CreateListingWidget(),
-        ),
-        FFRoute(
-          name: 'adoptChoose',
-          path: '/adoptChoose',
-          builder: (context, params) => AdoptChooseWidget(),
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'createListing')
+              : CreateListingWidget(),
         ),
         FFRoute(
           name: 'checkoutPage',
           path: '/checkoutPage',
           builder: (context, params) => CheckoutPageWidget(),
-        ),
-        FFRoute(
-          name: 'adoptList',
-          path: '/adoptList',
-          builder: (context, params) => AdoptListWidget(),
-        ),
-        FFRoute(
-          name: 'adoptInfo',
-          path: '/adoptInfo',
-          builder: (context, params) => AdoptInfoWidget(),
-        ),
-        FFRoute(
-          name: 'toysChoose',
-          path: '/toysChoose',
-          builder: (context, params) => ToysChooseWidget(),
         ),
         FFRoute(
           name: 'toysList',
@@ -177,9 +132,33 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ToysInfoWidget(),
         ),
         FFRoute(
-          name: 'foodChoose',
-          path: '/foodChoose',
-          builder: (context, params) => FoodChooseWidget(),
+          name: 'toysChoose',
+          path: '/toysChoose',
+          builder: (context, params) => ToysChooseWidget(),
+        ),
+        FFRoute(
+          name: 'searchBar',
+          path: '/searchBar',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'searchBar')
+              : SearchBarWidget(),
+        ),
+        FFRoute(
+          name: 'searchResult',
+          path: '/searchResult',
+          builder: (context, params) => SearchResultWidget(),
+        ),
+        FFRoute(
+          name: 'message',
+          path: '/message',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'message')
+              : MessageWidget(),
+        ),
+        FFRoute(
+          name: 'messageInterface',
+          path: '/messageInterface',
+          builder: (context, params) => MessageInterfaceWidget(),
         ),
         FFRoute(
           name: 'foodList',
@@ -190,6 +169,33 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'foodInfo',
           path: '/foodInfo',
           builder: (context, params) => FoodInfoWidget(),
+        ),
+        FFRoute(
+          name: 'foodChoose',
+          path: '/foodChoose',
+          builder: (context, params) => FoodChooseWidget(),
+        ),
+        FFRoute(
+          name: 'adoptList',
+          path: '/adoptList',
+          builder: (context, params) => AdoptListWidget(),
+        ),
+        FFRoute(
+          name: 'adoptInfo',
+          path: '/adoptInfo',
+          builder: (context, params) => AdoptInfoWidget(),
+        ),
+        FFRoute(
+          name: 'adoptChoose',
+          path: '/adoptChoose',
+          builder: (context, params) => AdoptChooseWidget(),
+        ),
+        FFRoute(
+          name: 'account',
+          path: '/account',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'account')
+              : AccountWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -308,6 +314,7 @@ class FFParameters {
     String paramName,
     ParamType type, {
     bool isList = false,
+    List<String>? collectionNamePath,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -325,6 +332,7 @@ class FFParameters {
       param,
       type,
       isList,
+      collectionNamePath: collectionNamePath,
     );
   }
 }

@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -25,8 +26,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
     super.initState();
     _model = createModel(context, () => LoginPageModel());
 
-    _model.usernameTextController ??= TextEditingController();
-    _model.usernameFocusNode ??= FocusNode();
+    _model.emailTextController ??= TextEditingController();
+    _model.emailFocusNode ??= FocusNode();
 
     _model.passwordTextController ??= TextEditingController();
     _model.passwordFocusNode ??= FocusNode();
@@ -61,7 +62,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                   Text(
                     'Welcome!',
                     style: FlutterFlowTheme.of(context).displaySmall.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: 'Outfit',
                           letterSpacing: 0.0,
                         ),
                   ),
@@ -71,7 +72,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                     child: Text(
                       'Log in to your account',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
-                            fontFamily: 'Inter',
+                            fontFamily: 'Readex Pro',
                             letterSpacing: 0.0,
                           ),
                     ),
@@ -82,16 +83,15 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                     child: Container(
                       width: 370.0,
                       child: TextFormField(
-                        controller: _model.usernameTextController,
-                        focusNode: _model.usernameFocusNode,
+                        controller: _model.emailTextController,
+                        focusNode: _model.emailFocusNode,
                         autofocus: true,
-                        autofillHints: [AutofillHints.username],
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Username',
+                          labelText: 'Email',
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           enabledBorder: OutlineInputBorder(
@@ -128,11 +128,11 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               FlutterFlowTheme.of(context).primaryBackground,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                         keyboardType: TextInputType.name,
-                        validator: _model.usernameTextControllerValidator
+                        validator: _model.emailTextControllerValidator
                             .asValidator(context),
                       ),
                     ),
@@ -146,13 +146,12 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         controller: _model.passwordTextController,
                         focusNode: _model.passwordFocusNode,
                         autofocus: true,
-                        autofillHints: [AutofillHints.password],
                         obscureText: !_model.passwordVisibility,
                         decoration: InputDecoration(
                           labelText: 'Password',
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           enabledBorder: OutlineInputBorder(
@@ -203,7 +202,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           ),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                         validator: _model.passwordTextControllerValidator
@@ -232,16 +231,18 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 60.0, 0.0, 16.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        context.pushNamed(
-                          'verifycation',
-                          extra: <String, dynamic>{
-                            kTransitionInfoKey: TransitionInfo(
-                              hasTransition: true,
-                              transitionType: PageTransitionType.fade,
-                              duration: Duration(milliseconds: 300),
-                            ),
-                          },
+                        GoRouter.of(context).prepareAuthEvent();
+
+                        final user = await authManager.signInWithEmail(
+                          context,
+                          _model.emailTextController.text,
+                          _model.passwordTextController.text,
                         );
+                        if (user == null) {
+                          return;
+                        }
+
+                        context.goNamedAuth('homePage', context.mounted);
                       },
                       text: 'Continue',
                       options: FFButtonOptions(
@@ -254,7 +255,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                   letterSpacing: 0.0,
                                 ),
@@ -282,7 +283,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'Readex Pro',
                                   color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
@@ -305,7 +306,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           )
                         ],
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                       ),

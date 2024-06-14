@@ -69,7 +69,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'Outfit',
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -103,7 +103,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
-                                        fontFamily: 'Inter',
+                                        fontFamily: 'Readex Pro',
                                         color: Colors.white,
                                         letterSpacing: 0.0,
                                       ),
@@ -257,7 +257,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -310,7 +310,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -363,7 +363,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -416,7 +416,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -475,7 +475,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Inter',
+                                              fontFamily: 'Readex Pro',
                                               letterSpacing: 0.0,
                                             ),
                                       ),

@@ -142,7 +142,7 @@ class _ToysInfoWidgetState extends State<ToysInfoWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'Readex Pro',
                                   letterSpacing: 0.0,
                                 ),
                           ),
@@ -176,7 +176,7 @@ class _ToysInfoWidgetState extends State<ToysInfoWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'Readex Pro',
                                   letterSpacing: 0.0,
                                 ),
                           ),
