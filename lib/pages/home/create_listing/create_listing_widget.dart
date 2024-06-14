@@ -95,7 +95,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                       child: Text(
                         'Jenis Hewan',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                       ),
@@ -115,7 +115,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           height: 56.0,
                           textStyle:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           hintText: 'Select',
@@ -148,7 +148,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           'Upload Foto',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -185,7 +185,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           'Masukan Nama',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -203,12 +203,12 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           labelText: 'Input Here...',
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           hintStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -244,7 +244,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                               15.0, 0.0, 0.0, 0.0),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                         validator: _model.textController1Validator
@@ -260,7 +260,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           'Deskripsi Singkat',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -278,12 +278,12 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           labelText: 'Input Here...',
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           hintStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -319,7 +319,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                               15.0, 0.0, 0.0, 0.0),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                         validator: _model.textController2Validator
@@ -335,7 +335,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           'Jenis Kelamin',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -356,7 +356,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           height: 56.0,
                           textStyle:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           hintText: 'Select',
@@ -389,7 +389,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           'Jenis Breed (Ras)',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -407,12 +407,12 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           labelText: 'Input Here...',
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           hintStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -448,7 +448,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                               15.0, 0.0, 0.0, 0.0),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                         validator: _model.textController3Validator
@@ -464,7 +464,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           'Berat Hewan',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -482,12 +482,12 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           labelText: 'Input Here...',
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           hintStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -523,7 +523,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                               15.0, 0.0, 0.0, 0.0),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                         validator: _model.textController4Validator
@@ -539,7 +539,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           'Warna Hewan',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -557,12 +557,12 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           labelText: 'Input Here...',
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           hintStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -598,7 +598,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                               15.0, 0.0, 0.0, 0.0),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                         validator: _model.textController5Validator
@@ -614,7 +614,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           'Vaksinasi',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -635,7 +635,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           height: 56.0,
                           textStyle:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                           hintText: 'Select',
@@ -668,7 +668,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           'Upload Sertifikat',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -700,17 +700,8 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
                       child: FFButtonWidget(
-                        onPressed: () async {
-                          context.pushNamed(
-                            'verifycation',
-                            extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
-                                hasTransition: true,
-                                transitionType: PageTransitionType.fade,
-                                duration: Duration(milliseconds: 300),
-                              ),
-                            },
-                          );
+                        onPressed: () {
+                          print('Button pressed ...');
                         },
                         text: 'Submit',
                         options: FFButtonOptions(
@@ -723,7 +714,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     color: Colors.white,
                                     letterSpacing: 0.0,
                                   ),

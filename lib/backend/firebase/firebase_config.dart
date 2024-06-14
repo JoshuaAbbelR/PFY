@@ -5,13 +5,12 @@ Future initFirebase() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: FirebaseOptions(
-            apiKey: "AIzaSyBMWvxHaLVLWAXsDXI0dUDJXtgHcfLusK4",
-            authDomain: "pet-s-for-you.firebaseapp.com",
-            projectId: "pet-s-for-you",
-            storageBucket: "pet-s-for-you.appspot.com",
-            messagingSenderId: "633947686814",
-            appId: "1:633947686814:web:f41a323afb21e19f82388f",
-            measurementId: "G-2KXYP3SB4Q"));
+            apiKey: "AIzaSyClQrmPUTA12aquHNLOM154krf2bU9TY68",
+            authDomain: "pet-for-you-5mjuzb.firebaseapp.com",
+            projectId: "pet-for-you-5mjuzb",
+            storageBucket: "pet-for-you-5mjuzb.appspot.com",
+            messagingSenderId: "974671934865",
+            appId: "1:974671934865:web:aa122b22b51eb6dc405630"));
   } else {
     await Firebase.initializeApp();
   }

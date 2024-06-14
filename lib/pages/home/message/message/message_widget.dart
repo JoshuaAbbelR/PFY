@@ -52,7 +52,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                 child: Text(
                   'My ChatBox',
                   style: FlutterFlowTheme.of(context).headlineLarge.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: 'Outfit',
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -79,7 +79,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     color: Colors.white,
                                     fontSize: 1.0,
                                     letterSpacing: 0.0,
@@ -110,7 +110,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                           color: FlutterFlowTheme.of(context).primaryBackground,
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     color: FlutterFlowTheme.of(context).primary,
                                     fontSize: 1.0,
                                     letterSpacing: 0.0,
@@ -195,7 +195,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'Readex Pro',
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -205,7 +205,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'Readex Pro',
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                 ),
@@ -228,7 +228,8 @@ class _MessageWidgetState extends State<MessageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .labelMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -315,7 +316,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'Readex Pro',
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -325,7 +326,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'Readex Pro',
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                 ),
@@ -348,7 +349,8 @@ class _MessageWidgetState extends State<MessageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .labelMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),

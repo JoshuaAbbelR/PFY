@@ -1,3 +1,5 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -11,35 +13,44 @@ class RegisterPageModel extends FlutterFlowModel<RegisterPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for email widget.
+  FocusNode? emailFocusNode;
+  TextEditingController? emailTextController;
+  String? Function(BuildContext, String?)? emailTextControllerValidator;
   // State field(s) for username widget.
-  FocusNode? usernameFocusNode1;
-  TextEditingController? usernameTextController1;
-  String? Function(BuildContext, String?)? usernameTextController1Validator;
-  // State field(s) for username widget.
-  FocusNode? usernameFocusNode2;
-  TextEditingController? usernameTextController2;
-  String? Function(BuildContext, String?)? usernameTextController2Validator;
+  FocusNode? usernameFocusNode;
+  TextEditingController? usernameTextController;
+  String? Function(BuildContext, String?)? usernameTextControllerValidator;
   // State field(s) for password widget.
   FocusNode? passwordFocusNode;
   TextEditingController? passwordTextController;
   late bool passwordVisibility;
   String? Function(BuildContext, String?)? passwordTextControllerValidator;
+  // State field(s) for conpassword widget.
+  FocusNode? conpasswordFocusNode;
+  TextEditingController? conpasswordTextController;
+  late bool conpasswordVisibility;
+  String? Function(BuildContext, String?)? conpasswordTextControllerValidator;
 
   @override
   void initState(BuildContext context) {
     passwordVisibility = false;
+    conpasswordVisibility = false;
   }
 
   @override
   void dispose() {
     unfocusNode.dispose();
-    usernameFocusNode1?.dispose();
-    usernameTextController1?.dispose();
+    emailFocusNode?.dispose();
+    emailTextController?.dispose();
 
-    usernameFocusNode2?.dispose();
-    usernameTextController2?.dispose();
+    usernameFocusNode?.dispose();
+    usernameTextController?.dispose();
 
     passwordFocusNode?.dispose();
     passwordTextController?.dispose();
+
+    conpasswordFocusNode?.dispose();
+    conpasswordTextController?.dispose();
   }
 }

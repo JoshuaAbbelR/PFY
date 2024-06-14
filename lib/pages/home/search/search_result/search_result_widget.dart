@@ -73,7 +73,7 @@ class _SearchResultWidgetState extends State<SearchResultWidget> {
                 Text(
                   'Result for search \"Example\"',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
-                        fontFamily: 'Inter',
+                        fontFamily: 'Readex Pro',
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -139,7 +139,7 @@ class _SearchResultWidgetState extends State<SearchResultWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .headlineSmall
                                               .override(
-                                                fontFamily: 'Readex Pro',
+                                                fontFamily: 'Outfit',
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -153,7 +153,7 @@ class _SearchResultWidgetState extends State<SearchResultWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'Readex Pro',
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),

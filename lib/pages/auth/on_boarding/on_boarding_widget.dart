@@ -136,7 +136,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                     child: Text(
                       'Find your new friend',
                       style: FlutterFlowTheme.of(context).titleLarge.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily: 'Outfit',
                             letterSpacing: 0.0,
                           ),
                     ),
@@ -150,7 +150,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                         'Make your life more happy with us to have a little new friends',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).labelSmall.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
                       ),
@@ -182,7 +182,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                   letterSpacing: 0.0,
                                 ),

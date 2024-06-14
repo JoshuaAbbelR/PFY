@@ -66,7 +66,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                       hintStyle: FlutterFlowTheme.of(context)
                           .bodyLarge
                           .override(
-                            fontFamily: 'Inter',
+                            fontFamily: 'Readex Pro',
                             color: FlutterFlowTheme.of(context).secondaryText,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w300,
@@ -102,7 +102,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                       filled: true,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Inter',
+                          fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
                     validator:
@@ -129,7 +129,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
                                     letterSpacing: 0.0,

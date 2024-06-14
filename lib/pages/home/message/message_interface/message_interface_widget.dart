@@ -129,7 +129,7 @@ class _MessageInterfaceWidgetState extends State<MessageInterfaceWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
-                                                fontFamily: 'Inter',
+                                                fontFamily: 'Readex Pro',
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -143,7 +143,7 @@ class _MessageInterfaceWidgetState extends State<MessageInterfaceWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'Readex Pro',
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -199,7 +199,7 @@ class _MessageInterfaceWidgetState extends State<MessageInterfaceWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
                             ),

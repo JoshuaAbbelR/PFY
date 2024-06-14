@@ -76,7 +76,7 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                   child: Text(
                     'Pet Type',
                     style: FlutterFlowTheme.of(context).headlineSmall.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: 'Outfit',
                           fontSize: 20.0,
                           letterSpacing: 0.0,
                         ),
@@ -150,7 +150,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -166,7 +167,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -182,7 +184,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -263,7 +266,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -279,7 +283,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -295,7 +300,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -376,7 +382,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -392,7 +399,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -408,7 +416,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -489,7 +498,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -505,7 +515,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -521,7 +532,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -602,7 +614,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -618,7 +631,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -634,7 +648,8 @@ class _FoodListWidgetState extends State<FoodListWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: 'Inter',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
