@@ -67,7 +67,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Welcome!',
+                    'Welcome Pals!',
                     style: FlutterFlowTheme.of(context).displaySmall.override(
                           fontFamily: 'Outfit',
                           letterSpacing: 0.0,
@@ -286,7 +286,6 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                         controller: _model.conpasswordTextController,
                         focusNode: _model.conpasswordFocusNode,
                         autofocus: true,
-                        autofillHints: [AutofillHints.email],
                         obscureText: !_model.conpasswordVisibility,
                         decoration: InputDecoration(
                           labelText: 'Confirm Password',
@@ -353,7 +352,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 250.0, 0.0, 16.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 210.0, 0.0, 16.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         GoRouter.of(context).prepareAuthEvent();
@@ -386,7 +385,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
 
                         context.goNamedAuth('homePage', context.mounted);
                       },
-                      text: 'Continue',
+                      text: 'Register',
                       options: FFButtonOptions(
                         width: 370.0,
                         height: 44.0,
@@ -440,7 +439,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                       hasTransition: true,
                                       transitionType:
                                           PageTransitionType.leftToRight,
-                                      duration: Duration(milliseconds: 300),
+                                      duration: Duration(milliseconds: 500),
                                     ),
                                   },
                                 );

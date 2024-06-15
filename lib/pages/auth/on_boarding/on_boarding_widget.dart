@@ -48,7 +48,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
           child: Align(
             alignment: AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 160.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 120.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -67,6 +67,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                               child: PageView(
                                 controller: _model.pageViewController ??=
                                     PageController(initialPage: 0),
+                                onPageChanged: (_) => setState(() {}),
                                 scrollDirection: Axis.horizontal,
                                 children: [
                                   ClipRRect(
@@ -131,70 +132,136 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                       ),
                     ),
                   ),
-                  Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: Text(
-                      'Find your new friend',
-                      style: FlutterFlowTheme.of(context).titleLarge.override(
-                            fontFamily: 'Outfit',
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(60.0, 0.0, 60.0, 20.0),
+                  if (_model.pageViewCurrentIndex == 0)
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
-                        'Make your life more happy with us to have a little new friends',
-                        textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.of(context).labelSmall.override(
-                              fontFamily: 'Readex Pro',
+                        'Find your new friend',
+                        style: FlutterFlowTheme.of(context).titleLarge.override(
+                              fontFamily: 'Outfit',
                               letterSpacing: 0.0,
                             ),
                       ),
                     ),
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
-                    child: FFButtonWidget(
-                      onPressed: () async {
-                        context.goNamed(
-                          'loginPage',
-                          extra: <String, dynamic>{
-                            kTransitionInfoKey: TransitionInfo(
-                              hasTransition: true,
-                              transitionType: PageTransitionType.fade,
-                              duration: Duration(milliseconds: 300),
-                            ),
-                          },
-                        );
-                      },
-                      text: 'Next',
-                      options: FFButtonOptions(
-                        width: 180.0,
-                        height: 40.0,
+                  if (_model.pageViewCurrentIndex == 0)
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            24.0, 0.0, 24.0, 0.0),
-                        iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primary,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                  letterSpacing: 0.0,
-                                ),
-                        elevation: 3.0,
-                        borderSide: BorderSide(
-                          color: Colors.transparent,
-                          width: 1.0,
+                            60.0, 0.0, 60.0, 20.0),
+                        child: Text(
+                          'Make your life more happy with us to have a little new friends',
+                          textAlign: TextAlign.center,
+                          style:
+                              FlutterFlowTheme.of(context).labelSmall.override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                  ),
+                  if (_model.pageViewCurrentIndex == 1)
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Text(
+                        'Get more Closer',
+                        style: FlutterFlowTheme.of(context).titleLarge.override(
+                              fontFamily: 'Outfit',
+                              letterSpacing: 0.0,
+                            ),
+                      ),
+                    ),
+                  if (_model.pageViewCurrentIndex == 1)
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            60.0, 0.0, 60.0, 20.0),
+                        child: Text(
+                          'Yep, ofcourse you will get closer with your beloved pet, absolutely!',
+                          textAlign: TextAlign.center,
+                          style:
+                              FlutterFlowTheme.of(context).labelSmall.override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
+                        ),
+                      ),
+                    ),
+                  if (_model.pageViewCurrentIndex == 0)
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 1.0),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          await _model.pageViewController?.nextPage(
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.ease,
+                          );
+                        },
+                        text: 'Next',
+                        options: FFButtonOptions(
+                          width: 180.0,
+                          height: 40.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              24.0, 0.0, 24.0, 0.0),
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 3.0,
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      ),
+                    ),
+                  if (_model.pageViewCurrentIndex == 1)
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 1.0),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.goNamed(
+                            'loginPage',
+                            extra: <String, dynamic>{
+                              kTransitionInfoKey: TransitionInfo(
+                                hasTransition: true,
+                                transitionType: PageTransitionType.fade,
+                                duration: Duration(milliseconds: 300),
+                              ),
+                            },
+                          );
+                        },
+                        text: 'Login',
+                        options: FFButtonOptions(
+                          width: 180.0,
+                          height: 40.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              24.0, 0.0, 24.0, 0.0),
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 3.0,
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      ),
+                    ),
                 ].divide(SizedBox(height: 5.0)),
               ),
             ),
