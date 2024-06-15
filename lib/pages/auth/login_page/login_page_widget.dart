@@ -60,7 +60,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Welcome!',
+                    'Welcome Pals!',
                     style: FlutterFlowTheme.of(context).displaySmall.override(
                           fontFamily: 'Outfit',
                           letterSpacing: 0.0,
@@ -244,7 +244,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
 
                         context.goNamedAuth('homePage', context.mounted);
                       },
-                      text: 'Continue',
+                      text: 'Login',
                       options: FFButtonOptions(
                         width: 370.0,
                         height: 44.0,
@@ -291,14 +291,14 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             mouseCursor: SystemMouseCursors.click,
                             recognizer: TapGestureRecognizer()
                               ..onTap = () async {
-                                context.goNamed(
+                                context.pushNamed(
                                   'registerPage',
                                   extra: <String, dynamic>{
                                     kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
                                       transitionType:
                                           PageTransitionType.rightToLeft,
-                                      duration: Duration(milliseconds: 300),
+                                      duration: Duration(milliseconds: 500),
                                     ),
                                   },
                                 );
