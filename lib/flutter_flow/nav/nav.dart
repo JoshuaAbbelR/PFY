@@ -211,6 +211,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'eventSignUp',
           path: '/eventSignUp',
           builder: (context, params) => EventSignUpWidget(),
+        ),
+        FFRoute(
+          name: 'callUs',
+          path: '/callUs',
+          builder: (context, params) => CallUsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
