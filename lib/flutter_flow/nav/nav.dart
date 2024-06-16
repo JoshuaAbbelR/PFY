@@ -263,7 +263,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ChangePictureWidget(),
         ),
         FFRoute(
-          name: 'Notification',
+          name: 'notification',
           path: '/notification',
           builder: (context, params) => NotificationWidget(),
         )
