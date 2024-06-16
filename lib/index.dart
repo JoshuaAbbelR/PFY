@@ -40,7 +40,7 @@ export '/pages/home/acc/call_us/call_us_widget.dart' show CallUsWidget;
 export '/pages/home/acc/report/report_widget.dart' show ReportWidget;
 export '/pages/home/acc/faq/faq_widget.dart' show FaqWidget;
 export '/pages/home/news_page/news_page_widget.dart' show NewsPageWidget;
-export '/pages/home/acc/account_detail/account_detail_widget.dart'
+export '/pages/home/acc/user/account_detail/account_detail_widget.dart'
     show AccountDetailWidget;
 export '/pages/home/acc/user_adopt_list/user_adopt_list_widget.dart'
     show UserAdoptListWidget;
