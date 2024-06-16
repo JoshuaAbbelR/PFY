@@ -37,3 +37,4 @@ export '/pages/home/event/event_detail/event_detail_widget.dart'
 export '/pages/home/event/event_sign_up/event_sign_up_widget.dart'
     show EventSignUpWidget;
 export '/pages/home/acc/call_us/call_us_widget.dart' show CallUsWidget;
+export '/pages/home/acc/report/report_widget.dart' show ReportWidget;

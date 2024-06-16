@@ -103,6 +103,7 @@ class _CallUsWidgetState extends State<CallUsWidget> {
                       style:
                           FlutterFlowTheme.of(context).headlineSmall.override(
                                 fontFamily: 'Outfit',
+                                fontSize: 16.0,
                                 letterSpacing: 0.0,
                               ),
                     ),
@@ -132,7 +133,7 @@ class _CallUsWidgetState extends State<CallUsWidget> {
                       style:
                           FlutterFlowTheme.of(context).headlineSmall.override(
                                 fontFamily: 'Outfit',
-                                fontSize: 14.0,
+                                fontSize: 16.0,
                                 letterSpacing: 0.0,
                               ),
                     ),
