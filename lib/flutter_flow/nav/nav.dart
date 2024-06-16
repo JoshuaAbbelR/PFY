@@ -236,6 +236,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'accountDetail',
           path: '/accountDetail',
           builder: (context, params) => AccountDetailWidget(),
+        ),
+        FFRoute(
+          name: 'userAdoptList',
+          path: '/userAdoptList',
+          builder: (context, params) => UserAdoptListWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
