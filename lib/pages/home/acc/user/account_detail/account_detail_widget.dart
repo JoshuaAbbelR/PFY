@@ -109,7 +109,9 @@ class _AccountDetailWidgetState extends State<AccountDetailWidget> {
                         builder: (context) => ClipRRect(
                           borderRadius: BorderRadius.circular(60.0),
                           child: Image.network(
-                            currentUserPhoto,
+                            currentUserPhoto != null && currentUserPhoto != ''
+                                ? currentUserPhoto
+                                : 'https://firebasestorage.googleapis.com/v0/b/pet-for-you-5mjuzb.appspot.com/o/profile.jpg?alt=media&token=bec46c48-5edf-413b-b11b-55465efd66eb',
                             width: 100.0,
                             height: 100.0,
                             fit: BoxFit.cover,
@@ -222,7 +224,7 @@ class _AccountDetailWidgetState extends State<AccountDetailWidget> {
                     onPressed: () async {
                       context.pushNamed('changePassword');
                     },
-                    text: 'Change Password',
+                    text: 'Reset Password',
                     options: FFButtonOptions(
                       width: 219.0,
                       height: 44.0,
@@ -248,9 +250,11 @@ class _AccountDetailWidgetState extends State<AccountDetailWidget> {
                 ),
                 FFButtonWidget(
                   onPressed: () async {
-                    await authManager.deleteUser(context);
+                    GoRouter.of(context).prepareAuthEvent();
+                    await authManager.signOut();
+                    GoRouter.of(context).clearRedirectLocation();
 
-                    context.goNamedAuth('homePage', context.mounted);
+                    context.goNamedAuth('onBoarding', context.mounted);
                   },
                   text: 'Delete Account',
                   options: FFButtonOptions(

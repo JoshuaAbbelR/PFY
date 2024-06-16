@@ -168,6 +168,7 @@ class _ChangeNameWidgetState extends State<ChangeNameWidget> {
                       await currentUserReference!.update(createUsersRecordData(
                         displayName: _model.textController.text,
                       ));
+                      context.safePop();
                     },
                     text: 'Change',
                     options: FFButtonOptions(

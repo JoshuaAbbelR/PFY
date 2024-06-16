@@ -330,7 +330,7 @@ class _AdoptChooseWidgetState extends State<AdoptChooseWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Text(
-                                            'Rabbits',
+                                            'Rabbit',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -373,7 +373,7 @@ class _AdoptChooseWidgetState extends State<AdoptChooseWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Text(
-                                            'Reptiles',
+                                            'Reptile',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(

@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -94,9 +95,11 @@ class _ChangePictureWidgetState extends State<ChangePictureWidget> {
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: Image.network(
-                            currentUserPhoto,
-                          ).image,
+                          image: CachedNetworkImageProvider(
+                            currentUserPhoto != null && currentUserPhoto != ''
+                                ? currentUserPhoto
+                                : 'https://firebasestorage.googleapis.com/v0/b/pet-for-you-5mjuzb.appspot.com/o/profile.jpg?alt=media&token=bec46c48-5edf-413b-b11b-55465efd66eb',
+                          ),
                         ),
                         border: Border.all(
                           color: FlutterFlowTheme.of(context).primary,
@@ -202,6 +205,7 @@ class _ChangePictureWidgetState extends State<ChangePictureWidget> {
                       await currentUserReference!.update(createUsersRecordData(
                         photoUrl: _model.uploadedFileUrl,
                       ));
+                      context.safePop();
                     },
                     text: 'Change',
                     options: FFButtonOptions(
