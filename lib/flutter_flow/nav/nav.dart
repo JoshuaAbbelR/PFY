@@ -241,6 +241,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'userAdoptList',
           path: '/userAdoptList',
           builder: (context, params) => UserAdoptListWidget(),
+        ),
+        FFRoute(
+          name: 'changeName',
+          path: '/changeName',
+          builder: (context, params) => ChangeNameWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
