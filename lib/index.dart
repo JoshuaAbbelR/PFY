@@ -32,3 +32,7 @@ export '/pages/home/adopt/adopt_choose/adopt_choose_widget.dart'
 export '/pages/home/acc/account/account_widget.dart' show AccountWidget;
 export '/pages/home/event/event_list/event_list_widget.dart'
     show EventListWidget;
+export '/pages/home/event/event_detail/event_detail_widget.dart'
+    show EventDetailWidget;
+export '/pages/home/event/event_sign_up/event_sign_up_widget.dart'
+    show EventSignUpWidget;
