@@ -196,6 +196,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'account')
               : AccountWidget(),
+        ),
+        FFRoute(
+          name: 'eventList',
+          path: '/eventList',
+          builder: (context, params) => EventListWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
