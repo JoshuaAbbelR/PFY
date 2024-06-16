@@ -79,7 +79,7 @@ class _NewsPageWidgetState extends State<NewsPageWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 16.0, 0.0, 0.0),
                   child: Text(
-                    'Ini posisi tidur kucing yang kamu perlu tahu!',
+                    'Judul',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                           fontFamily: 'Outfit',
                           letterSpacing: 0.0,
@@ -90,19 +90,12 @@ class _NewsPageWidgetState extends State<NewsPageWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 4.0),
                   child: Text(
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mi nisl, tincidunt ac eleifend in, laoreet a felis. Fusce vel est sed sem ornare euismod. Suspendisse potenti. Quisque ultrices, tortor ornare tempor placerat, nisl nibh semper enim, sed ornare massa leo rhoncus dolor. Suspendisse potenti. Nam lorem erat, mollis vel posuere eget, consequat non ipsum. Pellentesque massa libero, dapibus feugiat est vitae, finibus volutpat mi. In eu nunc ut dolor porttitor volutpat id at metus. Vivamus ultricies dolor congue ex sollicitudin, malesuada egestas libero viverra. Phasellus semper nisl tellus, nec tincidunt justo facilisis quis. In vel sollicitudin lorem.',
+                    'isian',
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
                   ),
-                ),
-                Divider(
-                  height: 24.0,
-                  thickness: 2.0,
-                  indent: 20.0,
-                  endIndent: 20.0,
-                  color: FlutterFlowTheme.of(context).alternate,
                 ),
               ],
             ),
