@@ -263,9 +263,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ChangePictureWidget(),
         ),
         FFRoute(
-          name: 'callUsCopy',
-          path: '/callUsCopy',
-          builder: (context, params) => CallUsCopyWidget(),
+          name: 'Notification',
+          path: '/notification',
+          builder: (context, params) => NotificationWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
