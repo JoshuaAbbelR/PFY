@@ -44,5 +44,9 @@ export '/pages/home/acc/user/account_detail/account_detail_widget.dart'
     show AccountDetailWidget;
 export '/pages/home/acc/user_adopt_list/user_adopt_list_widget.dart'
     show UserAdoptListWidget;
+export '/pages/home/acc/user/change_email/change_email_widget.dart'
+    show ChangeEmailWidget;
 export '/pages/home/acc/user/change_name/change_name_widget.dart'
     show ChangeNameWidget;
+export '/pages/home/acc/user/change_password/change_password_widget.dart'
+    show ChangePasswordWidget;

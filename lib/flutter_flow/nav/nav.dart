@@ -243,9 +243,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => UserAdoptListWidget(),
         ),
         FFRoute(
+          name: 'changeEmail',
+          path: '/changeEmail',
+          builder: (context, params) => ChangeEmailWidget(),
+        ),
+        FFRoute(
           name: 'changeName',
           path: '/changeName',
           builder: (context, params) => ChangeNameWidget(),
+        ),
+        FFRoute(
+          name: 'changePassword',
+          path: '/changePassword',
+          builder: (context, params) => ChangePasswordWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
