@@ -226,6 +226,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'faq',
           path: '/faq',
           builder: (context, params) => FaqWidget(),
+        ),
+        FFRoute(
+          name: 'newsPage',
+          path: '/newsPage',
+          builder: (context, params) => NewsPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
