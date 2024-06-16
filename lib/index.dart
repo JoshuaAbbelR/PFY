@@ -52,5 +52,5 @@ export '/pages/home/acc/user/change_password/change_password_widget.dart'
     show ChangePasswordWidget;
 export '/pages/home/acc/user/change_picture/change_picture_widget.dart'
     show ChangePictureWidget;
-export '/pages/home/acc/call_us_copy/call_us_copy_widget.dart'
-    show CallUsCopyWidget;
+export '/pages/home/acc/notification/notification_widget.dart'
+    show NotificationWidget;
