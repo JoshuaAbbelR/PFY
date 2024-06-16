@@ -93,31 +93,37 @@ class _EventSignUpWidgetState extends State<EventSignUpWidget> {
                           fontWeight: FontWeight.w500,
                         ),
                   ),
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            0.0, 24.0, 0.0, 12.0),
-                        child: Text(
-                          'Upload your pet photo',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                  Text(
+                    'Upload Your Pet Photo',
+                    style: FlutterFlowTheme.of(context).headlineMedium.override(
+                          fontFamily: 'Outfit',
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          fontSize: 14.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.w500,
                         ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                      child: DragTarget<String>(
+                        builder: (context, _, __) {
+                          return Container(
+                            width: 200.0,
+                            height: 200.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              border: Border.all(
+                                color: FlutterFlowTheme.of(context).alternate,
+                              ),
+                            ),
+                          );
+                        },
                       ),
-                      Container(
-                        width: 100.0,
-                        height: 100.0,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                        ),
-                        child: DragTarget<String>(),
-                      ),
-                    ],
+                    ),
                   ),
                   Padding(
                     padding:
@@ -374,7 +380,9 @@ class _EventSignUpWidgetState extends State<EventSignUpWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                     child: FFButtonWidget(
-                      onPressed: () async {},
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
                       text: 'Sign Up',
                       options: FFButtonOptions(
                         width: double.infinity,
