@@ -50,3 +50,5 @@ export '/pages/home/acc/user/change_name/change_name_widget.dart'
     show ChangeNameWidget;
 export '/pages/home/acc/user/change_password/change_password_widget.dart'
     show ChangePasswordWidget;
+export '/pages/home/acc/user/change_picture/change_picture_widget.dart'
+    show ChangePictureWidget;

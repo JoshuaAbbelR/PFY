@@ -256,6 +256,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'changePassword',
           path: '/changePassword',
           builder: (context, params) => ChangePasswordWidget(),
+        ),
+        FFRoute(
+          name: 'changePicture',
+          path: '/changePicture',
+          builder: (context, params) => ChangePictureWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
