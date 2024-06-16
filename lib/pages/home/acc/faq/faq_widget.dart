@@ -116,7 +116,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                       ),
                                 ),
                                 TextSpan(
-                                  text: 'Question',
+                                  text: 'Apakah mental admin sehat?',
                                   style: TextStyle(),
                                 )
                               ],
@@ -151,7 +151,8 @@ class _FaqWidgetState extends State<FaqWidget> {
                                         ),
                                   ),
                                   TextSpan(
-                                    text: 'Question',
+                                    text:
+                                        'Wah jelas sekali tidak dong. mana kuat bikin aplikasi serumit ini dalam waktu singkat.',
                                     style: TextStyle(),
                                   )
                                 ],

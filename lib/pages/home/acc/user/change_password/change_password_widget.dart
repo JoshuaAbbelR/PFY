@@ -1,10 +1,8 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +26,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
     super.initState();
     _model = createModel(context, () => ChangePasswordModel());
 
-    _model.textController ??= TextEditingController();
+    _model.emailTextController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
   }
 
@@ -77,22 +75,35 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                  child: Text(
+                    'We will send verification by email.',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Readex Pro',
+                          letterSpacing: 0.0,
+                        ),
+                  ),
+                ),
                 TextFormField(
-                  controller: _model.textController,
+                  controller: _model.emailTextController,
                   focusNode: _model.textFieldFocusNode,
                   autofocus: true,
-                  obscureText: !_model.passwordVisibility,
+                  obscureText: false,
                   decoration: InputDecoration(
-                    labelText: 'New Password',
+                    labelText: 'Email',
                     labelStyle:
-                        FlutterFlowTheme.of(context).labelMedium.override(
+                        FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
                               color: FlutterFlowTheme.of(context).primary,
                               letterSpacing: 0.0,
                             ),
+                    alignLabelWithHint: false,
+                    hintText: 'Enter Your Email',
                     hintStyle:
                         FlutterFlowTheme.of(context).labelMedium.override(
                               fontFamily: 'Readex Pro',
+                              color: FlutterFlowTheme.of(context).primary,
                               letterSpacing: 0.0,
                             ),
                     enabledBorder: OutlineInputBorder(
@@ -125,35 +136,38 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                     ),
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
-                    suffixIcon: InkWell(
-                      onTap: () => setState(
-                        () => _model.passwordVisibility =
-                            !_model.passwordVisibility,
-                      ),
-                      focusNode: FocusNode(skipTraversal: true),
-                      child: Icon(
-                        _model.passwordVisibility
-                            ? Icons.visibility_outlined
-                            : Icons.visibility_off_outlined,
-                        color: FlutterFlowTheme.of(context).primary,
-                        size: 24.0,
-                      ),
-                    ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
+                        color: FlutterFlowTheme.of(context).primary,
                         letterSpacing: 0.0,
                       ),
                   validator:
-                      _model.textControllerValidator.asValidator(context),
+                      _model.emailTextControllerValidator.asValidator(context),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      await currentUserReference!.update(createUsersRecordData(
-                        password: _model.textController.text,
-                      ));
+                      if (_model.emailTextController.text == currentUserEmail) {
+                        if (_model.emailTextController.text.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'Email required!',
+                              ),
+                            ),
+                          );
+                          return;
+                        }
+                        await authManager.resetPassword(
+                          email: _model.emailTextController.text,
+                          context: context,
+                        );
+                        context.safePop();
+                      } else {
+                        context.safePop();
+                      }
                     },
                     text: 'Change',
                     options: FFButtonOptions(

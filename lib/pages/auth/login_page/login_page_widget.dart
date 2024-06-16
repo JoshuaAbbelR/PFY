@@ -231,6 +231,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 60.0, 0.0, 16.0),
                     child: FFButtonWidget(
                       onPressed: () async {
+                        await authManager.refreshUser();
                         GoRouter.of(context).prepareAuthEvent();
 
                         final user = await authManager.signInWithEmail(
@@ -242,7 +243,15 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           return;
                         }
 
-                        context.goNamedAuth('homePage', context.mounted);
+                        if (currentUserEmailVerified) {
+                          context.pushNamedAuth('homePage', context.mounted);
+                        } else {
+                          GoRouter.of(context).prepareAuthEvent();
+                          await authManager.signOut();
+                          GoRouter.of(context).clearRedirectLocation();
+
+                          context.pushNamedAuth('loginPage', context.mounted);
+                        }
                       },
                       text: 'Login',
                       options: FFButtonOptions(

@@ -29,7 +29,7 @@ export '/pages/home/adopt/adopt_info/adopt_info_widget.dart'
     show AdoptInfoWidget;
 export '/pages/home/adopt/adopt_choose/adopt_choose_widget.dart'
     show AdoptChooseWidget;
-export '/pages/home/acc/account/account_widget.dart' show AccountWidget;
+export '/pages/home/account/account_widget.dart' show AccountWidget;
 export '/pages/home/event/event_list/event_list_widget.dart'
     show EventListWidget;
 export '/pages/home/event/event_detail/event_detail_widget.dart'

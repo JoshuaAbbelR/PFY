@@ -17,10 +17,10 @@ class CreateListingModel extends FlutterFlowModel<CreateListingWidget> {
   // State field(s) for DropDown widget.
   String? dropDownValue1;
   FormFieldController<String>? dropDownValueController1;
-  bool isDataUploading1 = false;
-  FFUploadedFile uploadedLocalFile1 =
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl1 = '';
+  String uploadedFileUrl = '';
 
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode1;
@@ -48,10 +48,6 @@ class CreateListingModel extends FlutterFlowModel<CreateListingWidget> {
   // State field(s) for DropDown widget.
   String? dropDownValue3;
   FormFieldController<String>? dropDownValueController3;
-  bool isDataUploading2 = false;
-  FFUploadedFile uploadedLocalFile2 =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl2 = '';
 
   @override
   void initState(BuildContext context) {}

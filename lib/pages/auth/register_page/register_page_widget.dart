@@ -355,6 +355,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 210.0, 0.0, 16.0),
                     child: FFButtonWidget(
                       onPressed: () async {
+                        await authManager.refreshUser();
                         GoRouter.of(context).prepareAuthEvent();
                         if (_model.passwordTextController.text !=
                             _model.conpasswordTextController.text) {
@@ -383,7 +384,20 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                               displayName: _model.usernameTextController.text,
                             ));
 
-                        context.goNamedAuth('homePage', context.mounted);
+                        await authManager.sendEmailVerification();
+                        if (currentUserEmailVerified) {
+                          GoRouter.of(context).prepareAuthEvent();
+                          await authManager.signOut();
+                          GoRouter.of(context).clearRedirectLocation();
+
+                          context.pushNamedAuth('loginPage', context.mounted);
+                        } else {
+                          GoRouter.of(context).prepareAuthEvent();
+                          await authManager.signOut();
+                          GoRouter.of(context).clearRedirectLocation();
+
+                          context.pushNamedAuth('loginPage', context.mounted);
+                        }
                       },
                       text: 'Register',
                       options: FFButtonOptions(
