@@ -144,8 +144,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           .primaryText,
                                       size: 24.0,
                                     ),
-                                    onPressed: () {
-                                      print('IconButton pressed ...');
+                                    onPressed: () async {
+                                      context.pushNamed('accountDetail');
                                     },
                                   ),
                                 ],
@@ -211,8 +211,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           .primaryText,
                                       size: 24.0,
                                     ),
-                                    onPressed: () {
-                                      print('IconButton pressed ...');
+                                    onPressed: () async {
+                                      context.pushNamed('userAdoptList');
                                     },
                                   ),
                                 ],
@@ -278,8 +278,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           .primaryText,
                                       size: 24.0,
                                     ),
-                                    onPressed: () {
-                                      print('IconButton pressed ...');
+                                    onPressed: () async {
+                                      context.pushNamed('notification');
                                     },
                                   ),
                                 ],
@@ -345,8 +345,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           .primaryText,
                                       size: 24.0,
                                     ),
-                                    onPressed: () {
-                                      print('IconButton pressed ...');
+                                    onPressed: () async {
+                                      context.pushNamed('report');
                                     },
                                   ),
                                 ],
@@ -429,8 +429,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           .primaryText,
                                       size: 24.0,
                                     ),
-                                    onPressed: () {
-                                      print('IconButton pressed ...');
+                                    onPressed: () async {
+                                      context.pushNamed('callUs');
                                     },
                                   ),
                                 ],
@@ -496,8 +496,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           .primaryText,
                                       size: 24.0,
                                     ),
-                                    onPressed: () {
-                                      print('IconButton pressed ...');
+                                    onPressed: () async {
+                                      context.pushNamed('faq');
                                     },
                                   ),
                                 ],

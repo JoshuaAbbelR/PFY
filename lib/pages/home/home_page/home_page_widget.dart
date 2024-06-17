@@ -263,16 +263,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ],
                                   shape: BoxShape.circle,
                                 ),
-                                child: Container(
-                                  width: 120.0,
-                                  height: 120.0,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/252/600',
-                                    fit: BoxFit.cover,
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('adoptChoose');
+                                  },
+                                  child: Container(
+                                    width: 120.0,
+                                    height: 120.0,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.network(
+                                      'https://firebasestorage.googleapis.com/v0/b/pet-for-you-5mjuzb.appspot.com/o/meng.jpg?alt=media&token=5a62d29c-b1fc-4c53-a6e3-84ca578506e0',
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -332,7 +341,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       shape: BoxShape.circle,
                                     ),
                                     child: Image.network(
-                                      'https://picsum.photos/seed/252/600',
+                                      'https://firebasestorage.googleapis.com/v0/b/pet-for-you-5mjuzb.appspot.com/o/foods.jpg?alt=media&token=108f4eb0-1c84-4802-aab0-5b835b51c685',
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -394,7 +403,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       shape: BoxShape.circle,
                                     ),
                                     child: Image.network(
-                                      'https://picsum.photos/seed/252/600',
+                                      'https://firebasestorage.googleapis.com/v0/b/pet-for-you-5mjuzb.appspot.com/o/toy.jpg?alt=media&token=6af58d70-b20e-4af3-b9d0-4945acf45228',
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -440,16 +449,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ],
                                   shape: BoxShape.circle,
                                 ),
-                                child: Container(
-                                  width: 120.0,
-                                  height: 120.0,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/252/600',
-                                    fit: BoxFit.cover,
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('eventList');
+                                  },
+                                  child: Container(
+                                    width: 120.0,
+                                    height: 120.0,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.network(
+                                      'https://firebasestorage.googleapis.com/v0/b/pet-for-you-5mjuzb.appspot.com/o/event.jpg?alt=media&token=ee5ef150-071b-4b81-8d8c-a7adf269f820',
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -504,9 +522,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             itemBuilder: (context, listViewIndex) {
                               final listViewNewsRecord =
                                   listViewNewsRecordList[listViewIndex];
-                              return Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    7.0, 0.0, 7.0, 0.0),
+                              return InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'newsPage',
+                                    queryParameters: {
+                                      'judul': serializeParam(
+                                        listViewNewsRecord.title,
+                                        ParamType.String,
+                                      ),
+                                    }.withoutNulls,
+                                  );
+                                },
                                 child: Container(
                                   width: 300.0,
                                   height: 100.0,

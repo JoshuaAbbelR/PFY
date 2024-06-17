@@ -6,6 +6,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 
+import '/backend/schema/enums/enums.dart';
+
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
@@ -163,7 +165,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'foodList',
           path: '/foodList',
-          builder: (context, params) => FoodListWidget(),
+          builder: (context, params) => FoodListWidget(
+            jenis: params.getParam(
+              'jenis',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'foodInfo',
@@ -205,12 +212,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'eventDetail',
           path: '/eventDetail',
-          builder: (context, params) => EventDetailWidget(),
+          builder: (context, params) => EventDetailWidget(
+            judull: params.getParam(
+              'judull',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'eventSignUp',
           path: '/eventSignUp',
-          builder: (context, params) => EventSignUpWidget(),
+          builder: (context, params) => EventSignUpWidget(
+            judulll: params.getParam(
+              'judulll',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'callUs',
@@ -230,7 +247,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'newsPage',
           path: '/newsPage',
-          builder: (context, params) => NewsPageWidget(),
+          builder: (context, params) => NewsPageWidget(
+            judul: params.getParam(
+              'judul',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'accountDetail',

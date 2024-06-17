@@ -4,6 +4,7 @@ import 'package:collection/collection.dart';
 
 import '/backend/schema/util/firestore_util.dart';
 import '/backend/schema/util/schema_util.dart';
+import '/backend/schema/enums/enums.dart';
 
 import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -26,9 +27,15 @@ class NewsRecord extends FirestoreRecord {
   String get pic => _pic ?? '';
   bool hasPic() => _pic != null;
 
+  // "Isian" field.
+  String? _isian;
+  String get isian => _isian ?? '';
+  bool hasIsian() => _isian != null;
+
   void _initializeFields() {
     _title = snapshotData['Title'] as String?;
     _pic = snapshotData['Pic'] as String?;
+    _isian = snapshotData['Isian'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -67,11 +74,13 @@ class NewsRecord extends FirestoreRecord {
 Map<String, dynamic> createNewsRecordData({
   String? title,
   String? pic,
+  String? isian,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'Title': title,
       'Pic': pic,
+      'Isian': isian,
     }.withoutNulls,
   );
 
@@ -83,11 +92,14 @@ class NewsRecordDocumentEquality implements Equality<NewsRecord> {
 
   @override
   bool equals(NewsRecord? e1, NewsRecord? e2) {
-    return e1?.title == e2?.title && e1?.pic == e2?.pic;
+    return e1?.title == e2?.title &&
+        e1?.pic == e2?.pic &&
+        e1?.isian == e2?.isian;
   }
 
   @override
-  int hash(NewsRecord? e) => const ListEquality().hash([e?.title, e?.pic]);
+  int hash(NewsRecord? e) =>
+      const ListEquality().hash([e?.title, e?.pic, e?.isian]);
 
   @override
   bool isValidKey(Object? o) => o is NewsRecord;
