@@ -154,6 +154,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                           .set(createReportRecordData(
                             reports: _model.textController.text,
                           ));
+                      context.safePop();
                     },
                     text: 'Send Report',
                     options: FFButtonOptions(

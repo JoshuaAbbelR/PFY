@@ -57,7 +57,7 @@ class _AccountDetailWidgetState extends State<AccountDetailWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pop();
+              context.pushNamed('account');
             },
           ),
           actions: [],

@@ -1,3 +1,5 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -5,6 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -170,8 +173,8 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                                     final selectedMedia =
                                         await selectMediaWithSourceBottomSheet(
                                       context: context,
-                                      maxWidth: 200.00,
-                                      maxHeight: 200.00,
+                                      maxWidth: 1080.00,
+                                      maxHeight: 1080.00,
                                       imageQuality: 100,
                                       allowPhoto: true,
                                     );
@@ -232,6 +235,12 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
+                                      image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: Image.network(
+                                          _model.uploadedFileUrl,
+                                        ).image,
+                                      ),
                                       border: Border.all(
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
@@ -778,8 +787,45 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 30.0),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              if ((_model.dropDownValue1 != null &&
+                                      _model.dropDownValue1 != '') &&
+                                  (_model.uploadedFileUrl != null &&
+                                      _model.uploadedFileUrl != '') &&
+                                  (_model.textController1.text != null &&
+                                      _model.textController1.text != '') &&
+                                  (_model.textController2.text != null &&
+                                      _model.textController2.text != '') &&
+                                  (_model.dropDownValue2 != null &&
+                                      _model.dropDownValue2 != '') &&
+                                  (_model.textController3.text != null &&
+                                      _model.textController3.text != '') &&
+                                  (_model.textController4.text != null &&
+                                      _model.textController4.text != '') &&
+                                  (_model.textController5.text != null &&
+                                      _model.textController5.text != '') &&
+                                  (_model.dropDownValue3 != null &&
+                                      _model.dropDownValue3 != '')) {
+                                await AdoptionRecord.collection
+                                    .doc()
+                                    .set(createAdoptionRecordData(
+                                      type: _model.dropDownValue1,
+                                      photo: _model.uploadedFileUrl,
+                                      name: _model.textController1.text,
+                                      desc: _model.textController2.text,
+                                      gender: _model.dropDownValue2,
+                                      breed: _model.textController3.text,
+                                      weight: int.tryParse(
+                                          _model.textController4.text),
+                                      colors: _model.textController5.text,
+                                      vaccine: _model.dropDownValue3,
+                                      usName: currentUserDisplayName,
+                                    ));
+
+                                context.pushNamed('userAdoptList');
+                              } else {
+                                context.pushNamed('homePage');
+                              }
                             },
                             text: 'Submit',
                             options: FFButtonOptions(
