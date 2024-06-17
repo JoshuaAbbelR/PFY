@@ -11,6 +11,7 @@ import 'schema/report_record.dart';
 import 'schema/adoption_record.dart';
 import 'schema/event_record.dart';
 import 'schema/foods_record.dart';
+import 'schema/toys_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -25,6 +26,7 @@ export 'schema/report_record.dart';
 export 'schema/adoption_record.dart';
 export 'schema/event_record.dart';
 export 'schema/foods_record.dart';
+export 'schema/toys_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Future<int> queryUsersRecordCount({
@@ -243,6 +245,43 @@ Future<List<FoodsRecord>> queryFoodsRecordOnce({
     queryCollectionOnce(
       FoodsRecord.collection,
       FoodsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query ToysRecords (as a Stream and as a Future).
+Future<int> queryToysRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      ToysRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<ToysRecord>> queryToysRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      ToysRecord.collection,
+      ToysRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<ToysRecord>> queryToysRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      ToysRecord.collection,
+      ToysRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

@@ -136,7 +136,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'toysInfo',
           path: '/toysInfo',
-          builder: (context, params) => ToysInfoWidget(),
+          builder: (context, params) => ToysInfoWidget(
+            pname: params.getParam(
+              'pname',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'toysChoose',
