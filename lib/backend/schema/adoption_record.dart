@@ -47,11 +47,6 @@ class AdoptionRecord extends FirestoreRecord {
   String get colors => _colors ?? '';
   bool hasColors() => _colors != null;
 
-  // "us_name" field.
-  String? _usName;
-  String get usName => _usName ?? '';
-  bool hasUsName() => _usName != null;
-
   // "type" field.
   String? _type;
   String get type => _type ?? '';
@@ -67,6 +62,11 @@ class AdoptionRecord extends FirestoreRecord {
   String get vaccine => _vaccine ?? '';
   bool hasVaccine() => _vaccine != null;
 
+  // "uid" field.
+  String? _uid;
+  String get uid => _uid ?? '';
+  bool hasUid() => _uid != null;
+
   void _initializeFields() {
     _photo = snapshotData['photo'] as String?;
     _name = snapshotData['name'] as String?;
@@ -74,10 +74,10 @@ class AdoptionRecord extends FirestoreRecord {
     _breed = snapshotData['breed'] as String?;
     _weight = castToType<int>(snapshotData['weight']);
     _colors = snapshotData['colors'] as String?;
-    _usName = snapshotData['us_name'] as String?;
     _type = snapshotData['type'] as String?;
     _gender = snapshotData['gender'] as String?;
     _vaccine = snapshotData['vaccine'] as String?;
+    _uid = snapshotData['uid'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -121,10 +121,10 @@ Map<String, dynamic> createAdoptionRecordData({
   String? breed,
   int? weight,
   String? colors,
-  String? usName,
   String? type,
   String? gender,
   String? vaccine,
+  String? uid,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -134,10 +134,10 @@ Map<String, dynamic> createAdoptionRecordData({
       'breed': breed,
       'weight': weight,
       'colors': colors,
-      'us_name': usName,
       'type': type,
       'gender': gender,
       'vaccine': vaccine,
+      'uid': uid,
     }.withoutNulls,
   );
 
@@ -155,10 +155,10 @@ class AdoptionRecordDocumentEquality implements Equality<AdoptionRecord> {
         e1?.breed == e2?.breed &&
         e1?.weight == e2?.weight &&
         e1?.colors == e2?.colors &&
-        e1?.usName == e2?.usName &&
         e1?.type == e2?.type &&
         e1?.gender == e2?.gender &&
-        e1?.vaccine == e2?.vaccine;
+        e1?.vaccine == e2?.vaccine &&
+        e1?.uid == e2?.uid;
   }
 
   @override
@@ -169,10 +169,10 @@ class AdoptionRecordDocumentEquality implements Equality<AdoptionRecord> {
         e?.breed,
         e?.weight,
         e?.colors,
-        e?.usName,
         e?.type,
         e?.gender,
-        e?.vaccine
+        e?.vaccine,
+        e?.uid
       ]);
 
   @override

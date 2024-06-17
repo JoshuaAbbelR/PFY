@@ -819,7 +819,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
                                           _model.textController4.text),
                                       colors: _model.textController5.text,
                                       vaccine: _model.dropDownValue3,
-                                      usName: currentUserDisplayName,
+                                      uid: currentUserUid,
                                     ));
 
                                 context.pushNamed('userAdoptList');
