@@ -32,10 +32,22 @@ class NewsRecord extends FirestoreRecord {
   String get isian => _isian ?? '';
   bool hasIsian() => _isian != null;
 
+  // "Isian2" field.
+  String? _isian2;
+  String get isian2 => _isian2 ?? '';
+  bool hasIsian2() => _isian2 != null;
+
+  // "Isian3" field.
+  String? _isian3;
+  String get isian3 => _isian3 ?? '';
+  bool hasIsian3() => _isian3 != null;
+
   void _initializeFields() {
     _title = snapshotData['Title'] as String?;
     _pic = snapshotData['Pic'] as String?;
     _isian = snapshotData['Isian'] as String?;
+    _isian2 = snapshotData['Isian2'] as String?;
+    _isian3 = snapshotData['Isian3'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -75,12 +87,16 @@ Map<String, dynamic> createNewsRecordData({
   String? title,
   String? pic,
   String? isian,
+  String? isian2,
+  String? isian3,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'Title': title,
       'Pic': pic,
       'Isian': isian,
+      'Isian2': isian2,
+      'Isian3': isian3,
     }.withoutNulls,
   );
 
@@ -94,12 +110,14 @@ class NewsRecordDocumentEquality implements Equality<NewsRecord> {
   bool equals(NewsRecord? e1, NewsRecord? e2) {
     return e1?.title == e2?.title &&
         e1?.pic == e2?.pic &&
-        e1?.isian == e2?.isian;
+        e1?.isian == e2?.isian &&
+        e1?.isian2 == e2?.isian2 &&
+        e1?.isian3 == e2?.isian3;
   }
 
   @override
-  int hash(NewsRecord? e) =>
-      const ListEquality().hash([e?.title, e?.pic, e?.isian]);
+  int hash(NewsRecord? e) => const ListEquality()
+      .hash([e?.title, e?.pic, e?.isian, e?.isian2, e?.isian3]);
 
   @override
   bool isValidKey(Object? o) => o is NewsRecord;

@@ -113,7 +113,7 @@ class _NewsPageWidgetState extends State<NewsPageWidget> {
                     Image.network(
                       newsPageNewsRecord!.pic,
                       width: MediaQuery.sizeOf(context).width * 1.0,
-                      height: 230.0,
+                      height: 200.0,
                       fit: BoxFit.cover,
                     ),
                     Padding(
@@ -128,6 +128,21 @@ class _NewsPageWidgetState extends State<NewsPageWidget> {
                             .headlineMedium
                             .override(
                               fontFamily: 'Outfit',
+                              fontSize: 20.0,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
+                      child: Text(
+                        newsPageNewsRecord!.isian,
+                        textAlign: TextAlign.justify,
+                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                              fontFamily: 'Readex Pro',
+                              color: FlutterFlowTheme.of(context).secondaryText,
                               letterSpacing: 0.0,
                             ),
                       ),
@@ -136,13 +151,24 @@ class _NewsPageWidgetState extends State<NewsPageWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
                       child: Text(
-                        valueOrDefault<String>(
-                          newsPageNewsRecord?.isian,
-                          'N/a',
-                        ),
+                        newsPageNewsRecord!.isian2,
                         textAlign: TextAlign.justify,
                         style: FlutterFlowTheme.of(context).labelLarge.override(
                               fontFamily: 'Readex Pro',
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              letterSpacing: 0.0,
+                            ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                          20.0, 10.0, 20.0, 20.0),
+                      child: Text(
+                        newsPageNewsRecord!.isian3,
+                        textAlign: TextAlign.justify,
+                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                              fontFamily: 'Readex Pro',
+                              color: FlutterFlowTheme.of(context).secondaryText,
                               letterSpacing: 0.0,
                             ),
                       ),

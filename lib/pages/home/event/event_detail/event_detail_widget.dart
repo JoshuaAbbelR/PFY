@@ -137,22 +137,49 @@ class _EventDetailWidgetState extends State<EventDetailWidget> {
                             ),
                       ),
                     ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
-                      child: Text(
-                        valueOrDefault<String>(
-                          dateTimeFormat('yMMMd', eventDetailEventRecord?.time),
-                          'N/a',
-                        ),
-                        style:
-                            FlutterFlowTheme.of(context).titleMedium.override(
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 10.0),
+                          child: Text(
+                            valueOrDefault<String>(
+                              dateTimeFormat(
+                                  'yMMMd', eventDetailEventRecord?.time),
+                              'N/a',
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .titleMedium
+                                .override(
                                   fontFamily: 'Readex Pro',
                                   color: FlutterFlowTheme.of(context).primary,
                                   fontSize: 16.0,
                                   letterSpacing: 0.0,
                                 ),
-                      ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 10.0),
+                          child: Text(
+                            valueOrDefault<String>(
+                              dateTimeFormat(
+                                  'Hm', eventDetailEventRecord?.time),
+                              'N/a',
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .titleMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  fontSize: 16.0,
+                                  letterSpacing: 0.0,
+                                ),
+                          ),
+                        ),
+                      ],
                     ),
                     Text(
                       valueOrDefault<String>(

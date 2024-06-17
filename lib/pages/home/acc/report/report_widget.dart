@@ -153,6 +153,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                           .doc()
                           .set(createReportRecordData(
                             reports: _model.textController.text,
+                            uid: currentUserUid,
                           ));
                       context.safePop();
                     },

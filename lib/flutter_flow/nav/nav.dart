@@ -126,7 +126,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'toysList',
           path: '/toysList',
-          builder: (context, params) => ToysListWidget(),
+          builder: (context, params) => ToysListWidget(
+            jenis: params.getParam(
+              'jenis',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'toysInfo',
@@ -175,7 +180,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'foodInfo',
           path: '/foodInfo',
-          builder: (context, params) => FoodInfoWidget(),
+          builder: (context, params) => FoodInfoWidget(
+            pname: params.getParam(
+              'pname',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'foodChoose',
