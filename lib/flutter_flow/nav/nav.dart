@@ -104,7 +104,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'loginPage',
           path: '/loginPage',
-          builder: (context, params) => LoginPageWidget(),
+          builder: (context, params) => LoginPageWidget(
+            notif: params.getParam(
+              'notif',
+              ParamType.bool,
+            ),
+          ),
         ),
         FFRoute(
           name: 'registerPage',
@@ -188,12 +193,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'adoptList',
           path: '/adoptList',
-          builder: (context, params) => AdoptListWidget(),
+          builder: (context, params) => AdoptListWidget(
+            jenis: params.getParam(
+              'jenis',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'adoptInfo',
           path: '/adoptInfo',
-          builder: (context, params) => AdoptInfoWidget(),
+          builder: (context, params) => AdoptInfoWidget(
+            pp: params.getParam(
+              'pp',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'adoptChoose',

@@ -191,7 +191,16 @@ class _ChangeEmailWidgetState extends State<ChangeEmailWidget> {
                       await authManager.signOut();
                       GoRouter.of(context).clearRedirectLocation();
 
-                      context.pushNamedAuth('loginPage', context.mounted);
+                      context.pushNamedAuth(
+                        'loginPage',
+                        context.mounted,
+                        queryParameters: {
+                          'notif': serializeParam(
+                            true,
+                            ParamType.bool,
+                          ),
+                        }.withoutNulls,
+                      );
                     },
                     text: 'Change',
                     options: FFButtonOptions(

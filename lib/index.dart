@@ -51,8 +51,11 @@ export '/pages/home/acc/user/change_picture/change_picture_widget.dart'
     show ChangePictureWidget;
 export '/pages/home/acc/notification/notification_widget.dart'
     show NotificationWidget;
-export '/chat/chat_2_details/chat2_details_widget.dart' show Chat2DetailsWidget;
-export '/chat/chat_2_main/chat2_main_widget.dart' show Chat2MainWidget;
-export '/chat/chat_2_invite_users/chat2_invite_users_widget.dart'
+export '/pages/home/chat/chat_2_details/chat2_details_widget.dart'
+    show Chat2DetailsWidget;
+export '/pages/home/chat/chat_2_main/chat2_main_widget.dart'
+    show Chat2MainWidget;
+export '/pages/home/chat/chat_2_invite_users/chat2_invite_users_widget.dart'
     show Chat2InviteUsersWidget;
-export '/chat/image_details/image_details_widget.dart' show ImageDetailsWidget;
+export '/pages/home/chat/image_details/image_details_widget.dart'
+    show ImageDetailsWidget;

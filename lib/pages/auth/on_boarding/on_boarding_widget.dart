@@ -229,6 +229,12 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                         onPressed: () async {
                           context.goNamed(
                             'loginPage',
+                            queryParameters: {
+                              'notif': serializeParam(
+                                false,
+                                ParamType.bool,
+                              ),
+                            }.withoutNulls,
                             extra: <String, dynamic>{
                               kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,

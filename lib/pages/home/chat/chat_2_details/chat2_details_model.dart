@@ -1,11 +1,11 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/chat/chat_details_overlay/chat_details_overlay_widget.dart';
-import '/chat/chat_thread_component/chat_thread_component_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/home/chat/chat_details_overlay/chat_details_overlay_widget.dart';
+import '/pages/home/chat/chat_thread_component/chat_thread_component_widget.dart';
 import 'dart:async';
 import 'chat2_details_widget.dart' show Chat2DetailsWidget;
 import 'package:auto_size_text/auto_size_text.dart';
