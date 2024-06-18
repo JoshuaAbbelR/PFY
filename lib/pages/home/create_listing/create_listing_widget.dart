@@ -70,7 +70,7 @@ class _CreateListingWidgetState extends State<CreateListingWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                   child: Text(
                     'Make New Adoption List',
                     style: FlutterFlowTheme.of(context).headlineSmall.override(

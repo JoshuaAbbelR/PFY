@@ -256,7 +256,7 @@ class _AccountDetailWidgetState extends State<AccountDetailWidget> {
 
                     context.goNamedAuth('onBoarding', context.mounted);
                   },
-                  text: 'Delete Account',
+                  text: 'Log Out',
                   options: FFButtonOptions(
                     width: 219.0,
                     height: 44.0,

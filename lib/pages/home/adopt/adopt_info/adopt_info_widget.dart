@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'adopt_info_model.dart';
@@ -33,6 +34,13 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AdoptInfoModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      // addUser_ToList
+      _model.addToUserList(currentUserReference!);
+      setState(() {});
+    });
   }
 
   @override
@@ -145,8 +153,8 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                                 color: Colors.white,
                                                 size: 25.0,
                                               ),
-                                              onPressed: () {
-                                                print('IconButton pressed ...');
+                                              onPressed: () async {
+                                                context.safePop();
                                               },
                                             ),
                                           ),
@@ -317,8 +325,8 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Container(
-                                    width: 75.0,
-                                    height: 75.0,
+                                    width: 80.0,
+                                    height: 80.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -366,8 +374,8 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Container(
-                                    width: 75.0,
-                                    height: 75.0,
+                                    width: 80.0,
+                                    height: 80.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -418,8 +426,8 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Container(
-                                    width: 75.0,
-                                    height: 75.0,
+                                    width: 80.0,
+                                    height: 80.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -439,7 +447,7 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            'Breed',
+                                            'Vaccine',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -449,7 +457,7 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                                 ),
                                           ),
                                           Text(
-                                            adoptInfoAdoptionRecord!.breed,
+                                            adoptInfoAdoptionRecord!.vaccine,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -478,7 +486,7 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Container(
                                     width: 125.0,
-                                    height: 75.0,
+                                    height: 80.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -526,8 +534,8 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Container(
-                                    width: 90.0,
-                                    height: 75.0,
+                                    width: 125.0,
+                                    height: 80.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -547,7 +555,7 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            'Vaccine',
+                                            'Breed',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -557,7 +565,7 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                                 ),
                                           ),
                                           Text(
-                                            adoptInfoAdoptionRecord!.vaccine,
+                                            adoptInfoAdoptionRecord!.breed,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -574,72 +582,23 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                               ],
                             ),
                           ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
-                    child: StreamBuilder<List<ChatsRecord>>(
-                      stream: queryChatsRecord(
-                        queryBuilder: (chatsRecord) =>
-                            chatsRecord.where(Filter.or(
-                          Filter(
-                            'user_a',
-                            isEqualTo: currentUserReference,
-                          ),
-                          Filter(
-                            'user_b',
-                            isEqualTo: adoptInfoAdoptionRecord?.user,
-                          ),
-                        )),
-                        singleRecord: true,
-                      ),
-                      builder: (context, snapshot) {
-                        // Customize what your widget looks like when it's loading.
-                        if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 50.0,
-                              height: 50.0,
-                              child: CircularProgressIndicator(
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                  FlutterFlowTheme.of(context).primary,
-                                ),
-                              ),
-                            ),
-                          );
-                        }
-                        List<ChatsRecord> buttonChatsRecordList =
-                            snapshot.data!;
-                        // Return an empty Container when the item does not exist.
-                        if (snapshot.data!.isEmpty) {
-                          return Container();
-                        }
-                        final buttonChatsRecord =
-                            buttonChatsRecordList.isNotEmpty
-                                ? buttonChatsRecordList.first
-                                : null;
-                        return FFButtonWidget(
-                          onPressed: () async {
-                            // newChat
+                          if (currentUserReference !=
+                              adoptInfoAdoptionRecord?.user)
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 30.0, 0.0, 0.0),
+                              child: FFButtonWidget(
+                                onPressed: () async {
+                                  // addUser_ToList
+                                  _model.addToUserList(
+                                      adoptInfoAdoptionRecord!.user!);
+                                  setState(() {});
+                                  // newChat
 
-                            var chatsRecordReference =
-                                ChatsRecord.collection.doc();
-                            await chatsRecordReference
-                                .set(createChatsRecordData(
-                              userA: currentUserReference,
-                              userB: adoptInfoAdoptionRecord?.user,
-                              lastMessage: '',
-                              lastMessageTime: getCurrentTimestamp,
-                              lastMessageSentBy: currentUserReference,
-                              groupChatId:
-                                  random_data.randomInteger(1000000, 9999999),
-                            ));
-                            _model.newChatThread =
-                                ChatsRecord.getDocumentFromData(
-                                    createChatsRecordData(
+                                  var chatsRecordReference =
+                                      ChatsRecord.collection.doc();
+                                  await chatsRecordReference.set({
+                                    ...createChatsRecordData(
                                       userA: currentUserReference,
                                       userB: adoptInfoAdoptionRecord?.user,
                                       lastMessage: '',
@@ -648,51 +607,76 @@ class _AdoptInfoWidgetState extends State<AdoptInfoWidget> {
                                       groupChatId: random_data.randomInteger(
                                           1000000, 9999999),
                                     ),
-                                    chatsRecordReference);
-                            if (Navigator.of(context).canPop()) {
-                              context.pop();
-                            }
-                            context.pushNamed(
-                              'chat_2_Details',
-                              queryParameters: {
-                                'chatRef': serializeParam(
-                                  buttonChatsRecord,
-                                  ParamType.Document,
-                                ),
-                              }.withoutNulls,
-                              extra: <String, dynamic>{
-                                'chatRef': buttonChatsRecord,
-                              },
-                            );
+                                    ...mapToFirestore(
+                                      {
+                                        'users': _model.userList,
+                                      },
+                                    ),
+                                  });
+                                  _model.newChatThread =
+                                      ChatsRecord.getDocumentFromData({
+                                    ...createChatsRecordData(
+                                      userA: currentUserReference,
+                                      userB: adoptInfoAdoptionRecord?.user,
+                                      lastMessage: '',
+                                      lastMessageTime: getCurrentTimestamp,
+                                      lastMessageSentBy: currentUserReference,
+                                      groupChatId: random_data.randomInteger(
+                                          1000000, 9999999),
+                                    ),
+                                    ...mapToFirestore(
+                                      {
+                                        'users': _model.userList,
+                                      },
+                                    ),
+                                  }, chatsRecordReference);
+                                  if (Navigator.of(context).canPop()) {
+                                    context.pop();
+                                  }
+                                  context.pushNamed(
+                                    'chat_2_Details',
+                                    queryParameters: {
+                                      'chatRef': serializeParam(
+                                        _model.newChatThread,
+                                        ParamType.Document,
+                                      ),
+                                    }.withoutNulls,
+                                    extra: <String, dynamic>{
+                                      'chatRef': _model.newChatThread,
+                                    },
+                                  );
 
-                            setState(() {});
-                          },
-                          text: 'Adopt Now ',
-                          options: FFButtonOptions(
-                            width: 360.0,
-                            height: 60.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Outfit',
-                                  color: Colors.white,
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
+                                  setState(() {});
+                                },
+                                text: 'Adopt Now ',
+                                options: FFButtonOptions(
+                                  width: 360.0,
+                                  height: 60.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                  elevation: 3.0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1.0,
+                                  ),
                                 ),
-                            elevation: 3.0,
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
+                              ),
                             ),
-                          ),
-                        );
-                      },
+                        ],
+                      ),
                     ),
                   ),
                 ],

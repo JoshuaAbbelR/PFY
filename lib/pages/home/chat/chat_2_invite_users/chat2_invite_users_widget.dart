@@ -437,21 +437,8 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                             ),
                             singleRecord: true,
                           ).then((s) => s.firstOrNull);
-                          if (Navigator.of(context).canPop()) {
-                            context.pop();
-                          }
-                          context.pushNamed(
-                            'chat_2_Details',
-                            queryParameters: {
-                              'chatRef': serializeParam(
-                                _model.updatedChatThread,
-                                ParamType.Document,
-                              ),
-                            }.withoutNulls,
-                            extra: <String, dynamic>{
-                              'chatRef': _model.updatedChatThread,
-                            },
-                          );
+
+                          context.goNamed('chat_2_main');
                         } else {
                           // newChat
 

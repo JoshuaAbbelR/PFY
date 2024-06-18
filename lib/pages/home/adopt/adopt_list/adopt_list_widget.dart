@@ -201,6 +201,7 @@ class _AdoptListWidgetState extends State<AdoptListWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
+                                                          fontSize: 18.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w600,
@@ -210,7 +211,7 @@ class _AdoptListWidgetState extends State<AdoptListWidget> {
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
-                                                          0.0, 0.0, 0.0, 10.0),
+                                                          0.0, 0.0, 0.0, 5.0),
                                                   child: Text(
                                                     listViewAdoptionRecord
                                                         .breed,
@@ -222,7 +223,7 @@ class _AdoptListWidgetState extends State<AdoptListWidget> {
                                                               'Readex Pro',
                                                           letterSpacing: 0.0,
                                                           fontWeight:
-                                                              FontWeight.w600,
+                                                              FontWeight.normal,
                                                         ),
                                                   ),
                                                 ),
@@ -241,7 +242,7 @@ class _AdoptListWidgetState extends State<AdoptListWidget> {
                                                               'Readex Pro',
                                                           letterSpacing: 0.0,
                                                           fontWeight:
-                                                              FontWeight.w600,
+                                                              FontWeight.normal,
                                                         ),
                                                   ),
                                                 ),
