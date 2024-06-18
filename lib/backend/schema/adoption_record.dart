@@ -62,10 +62,10 @@ class AdoptionRecord extends FirestoreRecord {
   String get vaccine => _vaccine ?? '';
   bool hasVaccine() => _vaccine != null;
 
-  // "uid" field.
-  String? _uid;
-  String get uid => _uid ?? '';
-  bool hasUid() => _uid != null;
+  // "user" field.
+  DocumentReference? _user;
+  DocumentReference? get user => _user;
+  bool hasUser() => _user != null;
 
   void _initializeFields() {
     _photo = snapshotData['photo'] as String?;
@@ -77,7 +77,7 @@ class AdoptionRecord extends FirestoreRecord {
     _type = snapshotData['type'] as String?;
     _gender = snapshotData['gender'] as String?;
     _vaccine = snapshotData['vaccine'] as String?;
-    _uid = snapshotData['uid'] as String?;
+    _user = snapshotData['user'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -124,7 +124,7 @@ Map<String, dynamic> createAdoptionRecordData({
   String? type,
   String? gender,
   String? vaccine,
-  String? uid,
+  DocumentReference? user,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -137,7 +137,7 @@ Map<String, dynamic> createAdoptionRecordData({
       'type': type,
       'gender': gender,
       'vaccine': vaccine,
-      'uid': uid,
+      'user': user,
     }.withoutNulls,
   );
 
@@ -158,7 +158,7 @@ class AdoptionRecordDocumentEquality implements Equality<AdoptionRecord> {
         e1?.type == e2?.type &&
         e1?.gender == e2?.gender &&
         e1?.vaccine == e2?.vaccine &&
-        e1?.uid == e2?.uid;
+        e1?.user == e2?.user;
   }
 
   @override
@@ -172,7 +172,7 @@ class AdoptionRecordDocumentEquality implements Equality<AdoptionRecord> {
         e?.type,
         e?.gender,
         e?.vaccine,
-        e?.uid
+        e?.user
       ]);
 
   @override

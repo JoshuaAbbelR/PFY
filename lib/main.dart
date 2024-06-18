@@ -123,9 +123,9 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'homePage': HomePageWidget(),
-      'searchBar': SearchBarWidget(),
       'createListing': CreateListingWidget(),
-      'message': MessageWidget(),
+      'searchBar': SearchBarWidget(),
+      'chat_2_main': Chat2MainWidget(),
       'account': AccountWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -155,14 +155,6 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.search,
-              size: 24.0,
-            ),
-            label: 'search',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.add,
               size: 24.0,
             ),
@@ -171,10 +163,18 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.chat_outlined,
+              Icons.search,
               size: 24.0,
             ),
-            label: 'message',
+            label: 'search',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.forum_outlined,
+              size: 24.0,
+            ),
+            label: '__',
             tooltip: '',
           ),
           BottomNavigationBarItem(

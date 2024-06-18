@@ -22,14 +22,14 @@ class ReportRecord extends FirestoreRecord {
   String get reports => _reports ?? '';
   bool hasReports() => _reports != null;
 
-  // "uid" field.
-  String? _uid;
-  String get uid => _uid ?? '';
-  bool hasUid() => _uid != null;
+  // "user" field.
+  DocumentReference? _user;
+  DocumentReference? get user => _user;
+  bool hasUser() => _user != null;
 
   void _initializeFields() {
     _reports = snapshotData['reports'] as String?;
-    _uid = snapshotData['uid'] as String?;
+    _user = snapshotData['user'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -67,12 +67,12 @@ class ReportRecord extends FirestoreRecord {
 
 Map<String, dynamic> createReportRecordData({
   String? reports,
-  String? uid,
+  DocumentReference? user,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'reports': reports,
-      'uid': uid,
+      'user': user,
     }.withoutNulls,
   );
 
@@ -84,11 +84,11 @@ class ReportRecordDocumentEquality implements Equality<ReportRecord> {
 
   @override
   bool equals(ReportRecord? e1, ReportRecord? e2) {
-    return e1?.reports == e2?.reports && e1?.uid == e2?.uid;
+    return e1?.reports == e2?.reports && e1?.user == e2?.user;
   }
 
   @override
-  int hash(ReportRecord? e) => const ListEquality().hash([e?.reports, e?.uid]);
+  int hash(ReportRecord? e) => const ListEquality().hash([e?.reports, e?.user]);
 
   @override
   bool isValidKey(Object? o) => o is ReportRecord;

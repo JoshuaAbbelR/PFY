@@ -16,9 +16,6 @@ export '/pages/home/search/search_bar/search_bar_widget.dart'
     show SearchBarWidget;
 export '/pages/home/search/search_result/search_result_widget.dart'
     show SearchResultWidget;
-export '/pages/home/message/message/message_widget.dart' show MessageWidget;
-export '/pages/home/message/message_interface/message_interface_widget.dart'
-    show MessageInterfaceWidget;
 export '/pages/home/foods/food_list/food_list_widget.dart' show FoodListWidget;
 export '/pages/home/foods/food_info/food_info_widget.dart' show FoodInfoWidget;
 export '/pages/home/foods/food_choose/food_choose_widget.dart'
@@ -54,3 +51,8 @@ export '/pages/home/acc/user/change_picture/change_picture_widget.dart'
     show ChangePictureWidget;
 export '/pages/home/acc/notification/notification_widget.dart'
     show NotificationWidget;
+export '/chat/chat_2_details/chat2_details_widget.dart' show Chat2DetailsWidget;
+export '/chat/chat_2_main/chat2_main_widget.dart' show Chat2MainWidget;
+export '/chat/chat_2_invite_users/chat2_invite_users_widget.dart'
+    show Chat2InviteUsersWidget;
+export '/chat/image_details/image_details_widget.dart' show ImageDetailsWidget;

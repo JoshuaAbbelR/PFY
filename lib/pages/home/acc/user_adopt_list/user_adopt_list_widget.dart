@@ -102,8 +102,8 @@ class _UserAdoptListWidgetState extends State<UserAdoptListWidget> {
                     child: StreamBuilder<List<AdoptionRecord>>(
                       stream: queryAdoptionRecord(
                         queryBuilder: (adoptionRecord) => adoptionRecord.where(
-                          'uid',
-                          isEqualTo: currentUserUid,
+                          'user',
+                          isEqualTo: currentUserReference,
                         ),
                       ),
                       builder: (context, snapshot) {
