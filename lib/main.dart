@@ -123,8 +123,8 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'homePage': HomePageWidget(),
-      'createListing': CreateListingWidget(),
       'searchBar': SearchBarWidget(),
+      'createListing': CreateListingWidget(),
       'chat_2_main': Chat2MainWidget(),
       'account': AccountWidget(),
     };
@@ -155,18 +155,18 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.add,
-              size: 24.0,
-            ),
-            label: 'Create',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.search,
               size: 24.0,
             ),
             label: 'search',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.add,
+              size: 24.0,
+            ),
+            label: 'Create',
             tooltip: '',
           ),
           BottomNavigationBarItem(

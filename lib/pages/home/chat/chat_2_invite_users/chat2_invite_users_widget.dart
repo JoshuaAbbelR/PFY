@@ -1,10 +1,10 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/chat/empty_state_simple/empty_state_simple_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/home/chat/empty_state_simple/empty_state_simple_widget.dart';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -69,7 +69,7 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: false,
@@ -78,7 +78,7 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Invite Friends',
+                'Invite Peoples',
                 style: FlutterFlowTheme.of(context).headlineSmall.override(
                       fontFamily: 'Outfit',
                       letterSpacing: 0.0,
@@ -136,7 +136,7 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 0.0, 0.0),
                           child: Text(
-                            'Invite Friends',
+                            'Invite Peoples',
                             style: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -529,7 +529,7 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                       setState(() {});
                     },
                     text:
-                        widget.chatRef != null ? 'Add to Chat' : 'Send Invites',
+                        widget.chatRef != null ? 'Add to Chat' : 'Start a Chat',
                     options: FFButtonOptions(
                       width: double.infinity,
                       height: 50.0,

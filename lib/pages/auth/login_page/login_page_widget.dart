@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/auth/auth_plz/auth_plz_widget.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,7 +11,12 @@ import 'login_page_model.dart';
 export 'login_page_model.dart';
 
 class LoginPageWidget extends StatefulWidget {
-  const LoginPageWidget({super.key});
+  const LoginPageWidget({
+    super.key,
+    required this.notif,
+  });
+
+  final bool? notif;
 
   @override
   State<LoginPageWidget> createState() => _LoginPageWidgetState();
@@ -59,6 +65,16 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  if (widget.notif == true)
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                      child: wrapWithModel(
+                        model: _model.authPlzModel,
+                        updateCallback: () => setState(() {}),
+                        child: AuthPlzWidget(),
+                      ),
+                    ),
                   Text(
                     'Welcome Pals!',
                     style: FlutterFlowTheme.of(context).displaySmall.override(
@@ -250,7 +266,16 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           await authManager.signOut();
                           GoRouter.of(context).clearRedirectLocation();
 
-                          context.pushNamedAuth('loginPage', context.mounted);
+                          context.pushNamedAuth(
+                            'loginPage',
+                            context.mounted,
+                            queryParameters: {
+                              'notif': serializeParam(
+                                true,
+                                ParamType.bool,
+                              ),
+                            }.withoutNulls,
+                          );
                         }
                       },
                       text: 'Login',
