@@ -161,11 +161,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : SearchBarWidget(),
         ),
         FFRoute(
-          name: 'searchResult',
-          path: '/searchResult',
-          builder: (context, params) => SearchResultWidget(),
-        ),
-        FFRoute(
           name: 'foodList',
           path: '/foodList',
           builder: (context, params) => FoodListWidget(
@@ -301,11 +296,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'changePicture',
           path: '/changePicture',
           builder: (context, params) => ChangePictureWidget(),
-        ),
-        FFRoute(
-          name: 'notification',
-          path: '/notification',
-          builder: (context, params) => NotificationWidget(),
         ),
         FFRoute(
           name: 'chat_2_Details',

@@ -12,10 +12,7 @@ export '/pages/home/toys/toys_list/toys_list_widget.dart' show ToysListWidget;
 export '/pages/home/toys/toys_info/toys_info_widget.dart' show ToysInfoWidget;
 export '/pages/home/toys/toys_choose/toys_choose_widget.dart'
     show ToysChooseWidget;
-export '/pages/home/search/search_bar/search_bar_widget.dart'
-    show SearchBarWidget;
-export '/pages/home/search/search_result/search_result_widget.dart'
-    show SearchResultWidget;
+export '/pages/home/search_bar/search_bar_widget.dart' show SearchBarWidget;
 export '/pages/home/foods/food_list/food_list_widget.dart' show FoodListWidget;
 export '/pages/home/foods/food_info/food_info_widget.dart' show FoodInfoWidget;
 export '/pages/home/foods/food_choose/food_choose_widget.dart'
@@ -49,8 +46,6 @@ export '/pages/home/acc/user/change_password/change_password_widget.dart'
     show ChangePasswordWidget;
 export '/pages/home/acc/user/change_picture/change_picture_widget.dart'
     show ChangePictureWidget;
-export '/pages/home/acc/notification/notification_widget.dart'
-    show NotificationWidget;
 export '/pages/home/chat/chat_2_details/chat2_details_widget.dart'
     show Chat2DetailsWidget;
 export '/pages/home/chat/chat_2_main/chat2_main_widget.dart'

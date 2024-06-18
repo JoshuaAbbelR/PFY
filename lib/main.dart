@@ -158,7 +158,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.search,
               size: 24.0,
             ),
-            label: 'search',
+            label: 'Search',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -174,7 +174,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.forum_outlined,
               size: 24.0,
             ),
-            label: '__',
+            label: 'Chat',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -182,7 +182,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.account_circle_outlined,
               size: 24.0,
             ),
-            label: 'account',
+            label: 'Account',
             tooltip: '',
           )
         ],

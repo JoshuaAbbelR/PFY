@@ -260,7 +260,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         }
 
                         if (currentUserEmailVerified) {
-                          context.pushNamedAuth('homePage', context.mounted);
+                          context.goNamedAuth('homePage', context.mounted);
                         } else {
                           GoRouter.of(context).prepareAuthEvent();
                           await authManager.signOut();

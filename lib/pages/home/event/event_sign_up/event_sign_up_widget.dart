@@ -224,6 +224,12 @@ class _EventSignUpWidgetState extends State<EventSignUpWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: Image.network(
+                                      _model.uploadedFileUrl,
+                                    ).image,
+                                  ),
                                   borderRadius: BorderRadius.circular(8.0),
                                   border: Border.all(
                                     color: FlutterFlowTheme.of(context)

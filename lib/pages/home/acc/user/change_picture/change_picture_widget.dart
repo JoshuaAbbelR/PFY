@@ -128,8 +128,8 @@ class _ChangePictureWidgetState extends State<ChangePictureWidget> {
                           final selectedMedia =
                               await selectMediaWithSourceBottomSheet(
                             context: context,
-                            maxWidth: 300.00,
-                            maxHeight: 300.00,
+                            maxWidth: 1080.00,
+                            maxHeight: 1080.00,
                             imageQuality: 100,
                             allowPhoto: true,
                           );
