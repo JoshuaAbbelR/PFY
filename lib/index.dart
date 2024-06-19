@@ -54,3 +54,10 @@ export '/pages/home/chat/chat_2_invite_users/chat2_invite_users_widget.dart'
     show Chat2InviteUsersWidget;
 export '/pages/home/chat/image_details/image_details_widget.dart'
     show ImageDetailsWidget;
+export '/pages/home/input_tanggal/input_tanggal_widget.dart'
+    show InputTanggalWidget;
+export '/pages/home/input_tanggal_kabisat/input_tanggal_kabisat_widget.dart'
+    show InputTanggalKabisatWidget;
+export '/input_bilangan_prima/input_bilangan_prima_widget.dart'
+    show InputBilanganPrimaWidget;
+export '/leapyear/leapyear_widget.dart' show LeapyearWidget;

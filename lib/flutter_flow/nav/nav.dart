@@ -343,6 +343,30 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.Document,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'inputTanggal',
+          path: '/inputTanggal',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'inputTanggal')
+              : InputTanggalWidget(),
+        ),
+        FFRoute(
+          name: 'inputTanggalKabisat',
+          path: '/inputTanggalKabisat',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'inputTanggalKabisat')
+              : InputTanggalKabisatWidget(),
+        ),
+        FFRoute(
+          name: 'inputBilanganPrima',
+          path: '/inputBilanganPrima',
+          builder: (context, params) => InputBilanganPrimaWidget(),
+        ),
+        FFRoute(
+          name: 'leapyear',
+          path: '/leapyear',
+          builder: (context, params) => LeapyearWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
