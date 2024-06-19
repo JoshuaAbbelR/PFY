@@ -362,6 +362,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'inputBilanganPrima',
           path: '/inputBilanganPrima',
           builder: (context, params) => InputBilanganPrimaWidget(),
+        ),
+        FFRoute(
+          name: 'leapyear',
+          path: '/leapyear',
+          builder: (context, params) => LeapyearWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
