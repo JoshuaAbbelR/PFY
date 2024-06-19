@@ -109,7 +109,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'homePage';
+  String _currentPageName = 'inputTanggal';
   late Widget? _currentPage;
 
   @override
@@ -123,10 +123,11 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'homePage': HomePageWidget(),
-      'searchBar': SearchBarWidget(),
       'createListing': CreateListingWidget(),
-      'chat_2_main': Chat2MainWidget(),
+      'searchBar': SearchBarWidget(),
       'account': AccountWidget(),
+      'chat_2_main': Chat2MainWidget(),
+      'inputTanggal': InputTanggalWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -155,6 +156,14 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
+              Icons.add,
+              size: 24.0,
+            ),
+            label: 'Create',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
               Icons.search,
               size: 24.0,
             ),
@@ -163,10 +172,10 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.add,
+              Icons.account_circle_outlined,
               size: 24.0,
             ),
-            label: 'Create',
+            label: 'Account',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -179,10 +188,10 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.account_circle_outlined,
+              Icons.home_outlined,
               size: 24.0,
             ),
-            label: 'Account',
+            label: 'Home',
             tooltip: '',
           )
         ],

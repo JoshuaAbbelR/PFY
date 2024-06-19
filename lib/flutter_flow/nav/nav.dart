@@ -343,6 +343,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.Document,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'inputTanggal',
+          path: '/inputTanggal',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'inputTanggal')
+              : InputTanggalWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
